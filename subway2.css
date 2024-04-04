@@ -1,0 +1,707 @@
+
+
+.route_map_wrap li {    
+    line-height: initial;
+    list-style: none;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: 0;
+    padding: 0;
+}
+.route_map_wrap {
+    width: calc(100% - 60px);
+    margin-top: 70px;
+    margin-left: 60px;
+    margin-bottom: 50px;
+	position : relative;
+}
+
+
+.route_map:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.route_map.se {
+	padding-top: 20px;
+	height: 115px;
+}
+
+.route_map li {
+	position: relative;
+	float: left;
+	height: 85px;
+}
+
+.route_map li.right {
+	float: right;
+	margin-top: 20px;
+	margin-right: 7px;
+}
+
+.route_map li.right span.box {
+	font-size: 14px;
+}
+
+.route_map li.right div.box {
+	font-size: 14px;
+}
+
+.route_map li.se {
+	float: right;
+	margin-top: 125px;
+}
+
+.route_map li.se.r {
+	margin-right: -18px;
+}
+@media \0screen {
+	.route_map li.se.r {
+		margin-right: -20px;
+	}
+}
+
+.route_map li i {
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 30px;
+	height: 30px;
+	text-indent: 200%;
+	background: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	z-index: 15;
+	box-sizing: border-box;
+    background: url(https://youninsubway.s3.amazonaws.com/images/sub_ico.png);
+    background-size: 30px 30px;
+}
+
+
+
+.route_map li i.t {
+	background: url(https://youninsubway.s3.amazonaws.com/images/sub_ico2.png);
+    background-size: 30px 30px;
+}
+
+.route_map li i.rotate {
+    transform: rotate( 90deg );
+    background-position-y: 1px;
+}
+
+
+@media \0screen {
+	.route_map li i {
+		position: relative;
+		display: inline-block;
+		float: left;
+		width: 32px;
+		height: 32px;
+		background: url(https://youninsubway.s3.amazonaws.com/images/station_icon.png) no-repeat;
+		text-indent: 200%;
+		white-space: nowrap;
+		overflow: hidden;
+		z-index: 10;
+		box-sizing: border-box;
+		border: 0;
+	}
+	.route_map li i:after {
+		display: none;
+	}
+	.route_map li.right {
+		margin-right: -8px;
+	}
+	.route_map li i.t {
+		background: url(https://youninsubway.s3.amazonaws.com/images/station_t_icon.png) no-repeat 2px 0;
+	}
+
+
+}
+
+.route_arrow {
+	display: inline-block;
+	margin: 11px 7px 0 11px;
+}
+
+.route_map li i.t:after {
+	content: '';
+	display: none;
+}
+
+.route_map li .line {
+	position: relative;
+	float: left;
+	width: 159px;
+	height: 6px;
+	margin-top: 12px;
+	margin-left: -2px;
+	background: #c9c9c9;
+	text-indent: 200%;
+	white-space: nowrap;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.route_map li .line.se {
+	width: 18px;
+}
+
+.route_map li .line.se.se02 {
+    margin-right: 0px;	
+}
+
+.route_map li .line.verti{
+	width:6px;
+	height:78px;
+	margin-left:-18px;
+	margin-top:-68px;
+}
+.route_map li .line.verti.se{
+	/* margin-top:20px; */
+	margin-top: 30px;
+}
+
+
+.route_map li .line.on {
+	background: #6FB245;
+}
+
+
+.route_map li .line.active {
+	background: #67473c !important;
+}
+
+.route_map li .round {
+	position: relative;
+	float: left;
+	width: 25px;
+	height: 25px;
+	margin-top: 12px;
+	overflow: hidden;
+	text-indent: 200%;
+	white-space: nowrap;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.route_map li .round.on:after {
+	border: 6px solid #6FB245;
+}
+
+.route_map li .round.active:after {
+	border-color: #67473c !important;
+}
+
+.route_map li .round:after {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: -100%;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border: 6px solid #c9c9c9;
+	box-sizing: border-box;
+	z-index: 1;
+	behavior: url(PIE.htc);
+}
+
+.route_map li .round.bot {
+    margin-left: -6px;
+	/* margin-top: 68px; */
+	margin-top: -7px;
+}
+
+.route_map li .round.re {
+	left: 0;
+}
+
+.route_map li .round.bot:after {
+	top: -100%;
+}
+
+.route_map li .text {        
+    position: absolute;
+    width: 176px;
+    top: 42px;
+    left: 0;
+    display: inline-block;
+    margin-left: -73px;
+}
+
+.route_map li .text.top {
+	top: -50px;
+}
+
+.route_map li.right .text {
+	top: 0;
+	margin-left: -183px;
+}
+
+.route_map li h5 {
+	display: block;
+	color: #000000;
+	text-align: center;
+	margin-bottom: 3px;
+	line-height: 1.2;
+}
+
+.route_map li h5 em {
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+    color: #6C6C6C;
+}
+
+.route_map li span {
+	display: block;
+	color: #6C6C6C;
+	text-align: center;
+	font-size: 16px;
+}
+
+.route_map li.right h5, .route_map li.right span {
+	text-align: right;
+}
+
+.route_map .click_event_wrap {
+	position: absolute;
+	top: -62px;
+	left: 0;
+	width: 146px;
+	height: 62px;
+	z-index: 99;
+	margin-left: -63px;
+	overflow: hidden;
+}
+
+.route_map .click_event {
+	position: relative;
+	width: 146px;
+	height: 43px;
+	background: rgba(0, 0, 0, .2);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,
+		endColorstr=#33000000);
+	zoom: 1; 
+	z-index: 99;
+}
+
+.route_map .click_event:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.route_map .click_event_wrap .stick {
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: 79px;
+	width: 3px;
+	height: 50px;
+	background: #6FB245;
+	z-index: 1;
+}
+
+.route_map .click_event .head {
+	float: left;
+	width: 42px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+	color: #fff;
+	background: #6FB245;
+	text-align: center;
+	z-index: 99;
+}
+
+.route_map .click_event .name {
+	position: relative;
+	float: left;
+	display: block;
+	width: 104px;
+	height: 40px;
+	border: 1px solid #6FB245;
+	background: #fff;
+	box-sizing: border-box;
+	z-index: 99;
+	padding-top: 0;
+}
+
+.route_map .click_event .name .txt {
+	display: table;
+	vertical-align: middle;
+	color: #000000;
+	line-height: 1.2;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+
+.route_map .click_event .name .txt strong {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.route_map .click_event_wrap.bottom {
+	top: 31px;
+}
+
+.route_map .click_event_wrap.right {
+	top: -50px;
+}
+
+.route_map .click_event_wrap.right .stick {
+	display: none;
+}
+
+.route_map .click_event_wrap.bottom .click_event {
+	position: absolute;
+	bottom: 0;
+}
+
+.route_map .click_event_wrap.bottom .stick {
+	top: 0;
+}
+
+.markerBox{
+    border: #67473c 2px solid;
+    width: 140px;
+    height: 40px;
+	background : white;
+	position : absolute;
+	z-index: 10;
+}
+
+.markerName{
+	position: absolute;
+    font-size: 0.8rem;
+    right: 4px;
+    top: 10px;	
+}
+#markerBox_1{
+	top: -80%;
+    left: 7%;
+}
+
+#markerBox_2{
+	top: 64%;
+    left: 6.5%;
+}
+
+#markerBox_3{
+	top: -80%;
+    left: 6.5%;
+}
+#markerBox_4{
+	top: 64%;
+    left: 6.5%;
+}
+#markerBox_5{
+	top: -80%;
+    left: 6.5%;
+}
+#markerBox_6{
+	top: 64%;
+    left: -65%;
+}
+#markerBox_7{
+    top: 28%;
+    left: -170%;
+}
+#markerBox_8{
+    top: -48%;
+    left: -340%;
+}
+#markerBox_9{
+	top: -65%;
+    left: -70%;
+}
+#markerBox_10{
+	top: 64%;
+    left: 6.5%;
+}
+#markerBox_11{
+	top: -80%;
+    left: 6.5%;
+}
+#markerBox_12{
+	top: 64%;
+    left: 6.5%;
+}
+#markerBox_13{
+	top: -80%;
+    left: 6.5%;
+}
+#markerBox_14 {
+	top: 64%;
+    left: 6.5%;
+}
+#markerBox_15 {
+	top: -80%;
+    left: 6.5%;
+}
+
+.markerBox .guide{
+    border: #67473c 2px solid;
+	width : 4px;
+	height : 40px;
+	position : relative;
+}
+
+#markerBox_1 .guide {
+	top : 100%;
+	left : calc( 0% - 2px);
+	height: 34px;
+}
+#markerBox_2 .guide {
+	top : -100%;
+	left : calc( 0% - 2px);
+}
+#markerBox_3 .guide {
+	top : 100%;
+	left : calc( 0% - 2px);
+
+}
+#markerBox_4 .guide {
+	top : -100%;
+	left : calc( 0% - 2px);
+
+}
+#markerBox_5 .guide {
+	top : 100%;
+	left : calc( 0% - 2px);
+}
+#markerBox_6 .guide {
+	top : -100%;
+	left : calc(100% - 2px);
+	height: 36px;
+}
+#markerBox_7 .guide {
+    top: -16%;
+    left: calc(100% - 2px);
+    height: 2px;
+}
+#markerBox_8 .guide {
+    left: calc( 87% - 2px);
+    top: 100%;
+    height: 10px;
+}
+#markerBox_9 .guide {
+	top: 100%;
+    left: calc( 48% - 2px);
+    height: 25px;
+}
+#markerBox_10 .guide {
+	top : -100%;
+	left : calc( 0% - 2px);
+}
+#markerBox_11 .guide {
+	top : 100%;
+	left : calc( 0% - 2px);
+}
+#markerBox_12 .guide {
+	top : -100%;
+	left : calc( 0% - 2px);
+}
+#markerBox_13 .guide {
+	top : 100%;
+	left : calc( 0% - 2px);
+}
+#markerBox_14 .guide {
+	top : -100%;
+	left : calc( 0% - 2px);
+}
+#markerBox_15 .guide {
+	top : 100%;
+	left : calc( 0% - 2px);
+	height: 34px;
+}
+
+.markerTitle{
+    background: #67473c;
+    width: 45%;
+    height: 100%;
+    float: left;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    line-height: 15px;
+}
+
+
+@media screen and (max-width:1310px) {
+	.route_map_wrap {
+		width: 100%;
+		margin: 20px 0;
+	}
+	.route_map {
+		line-height: 85px;
+	}
+	.route_map li {
+		width: 14.2%;
+	}
+	.route_map li.end {
+		width: 14.8%;
+		float: right;
+	}
+	.route_map li.end .line {
+		margin-left: 0;
+	}
+	.route_map li i {
+		background-color: #fff;
+		z-index: 5;
+	}
+	.route_map li h5 {
+		font-size: .75em;
+	}
+	.route_map li span {
+		font-size: .65em;
+	}
+	.route_map li .line {
+		position: absolute;
+		width: 100%;
+		margin-left: 10%;
+	}
+	.route_map li .line.se {
+		width: 100%;
+	}
+	.route_map li .round {
+		float: right;
+		position: absolute;
+		right: 0;
+		background: #fff;
+		z-index: 1;
+	}
+	.route_map li .text.fr {
+		margin-left: 0;
+		width: 150%;
+	}
+	.route_map li .text.fr h5, .route_map li .text.fr span {
+		text-align: left;
+		word-break: break-all;
+	}
+	.route_map li h5 em {
+		font-size: 0.7em;
+	}
+	.route_map li .text.top {
+		top: -22px;
+	}
+	.route_map li .line.verti {
+		width: 4px;
+		height: 60px;
+		margin-left: 0px;
+		margin-top: -133px;
+		right: 1px;
+	}
+	.route_map li .line.verti.se {
+		margin-top: -61px;
+	}
+	.route_map li .line.verti02 {
+		width: 4px;
+		height: 60px;
+		margin-left: 0px;
+		margin-top: 18px;
+		right: 1px;
+	}
+	.route_map li .line.verti.se02 {
+		margin-top: -48px;
+	}
+	.route_map li.right a, .route_map li.right span {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.route_map li.right {
+		position: relative;
+		margin-top: 0;
+		width: 13.9%;
+		margin-right: 0;
+	}
+	.route_map li.right i {
+		float: right;
+		margin-right: -8px;
+	}
+	.route_map li.se {
+		margin-top: 0;
+	}
+	.route_map li.se.r {
+        margin-top: 0px;
+        margin-right: 0px;
+        right: 0;
+	}
+	.route_map li.se.r .line {
+		margin-left: 0;
+	}
+	.route_map li.right .text {
+		margin-left: -0;
+		right: 26px;
+		top: 3px;
+		left: auto;
+	}
+	.route_map .click_event_wrap {
+		top: -56px;
+		margin-left: -71px;
+	}
+	.route_map .click_event_wrap.bottom {
+		top: 24px;
+	}
+	.route_map li i {
+		top: 5px;
+		width: 20px;
+		height: 20px;
+		border-width: 2px;
+        background-size: 21px 21px;
+	}
+	.route_map li i.t {    
+        background-size: 18px;
+        background-repeat: no-repeat;
+	}
+	.route_map li i:after {
+		top: 2px;
+		left: 2px;
+		width: 12px;
+		height: 12px;
+	}
+	.route_map li .text {
+		top: 30px;
+		width: 125px;
+	}
+	.route_map li .line {
+		height: 4px;
+		margin-top: 13px;
+	}
+	.route_map li .round:after {
+		top: 1px;
+		margin-left: -1px;
+		border: 4px solid #c9c9c9;
+	}
+	.route_map li .round.on:after {
+		border-width: 4px;
+	}
+	.route_map li .round.bot {
+		margin-top: -8px;
+		/* right: -12px; */
+	}
+}
+
+@media screen and (max-width:876px) {
+    .route_map li.se.r {
+        margin-top: 171px;
+        margin-right: 0px;
+        right: 12px;
+        position: absolute;
+	}
+	.route_map li.se {
+		margin-top: 86px;
+	}
+	.route_map .round.on.bot{
+		right : -12px;
+	}
+	
+
+}

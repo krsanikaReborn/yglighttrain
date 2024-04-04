@@ -1,0 +1,714 @@
+<link rel="stylesheet" href="https://youninsubway.s3.amazonaws.com/css/subway2.css">
+    
+<div class="container-fluid sub_top_01_01 top_height">
+    <div class="row align-items-center mw_1296">
+        <div class="col color_fff text-center">
+            <p class="fs_20">생활은 <span class="fw_600">편리하게</span>, 환경은 <span class="fw_600">아름답게</span></p>
+            <p class="fs_30 pt-3 fw_700">용인 에버라인</p>
+            <p class="letter48">Yongin Everline</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5">
+    <div class="row mw_1296">
+        <div class="col">
+            <div class="color_point point_ico fs_20 fw_600">
+                <img src="https://youninsubway.s3.amazonaws.com/images/ico/directions_subway.png" class="img-fluid mr-1">
+                운행시간
+            </div>
+        </div>
+    </div>
+
+    <div class="row pt_30px mw_1296">
+        <div class="col py_40px bg_f8 text-center">
+            <p class="fs_18 pc_br_none">역을 선택하시면 해당역의<br>열차시간표를 안내해 드립니다.</p>
+
+            <div class="pt_30px d-flex fs_18 align-items-center mw_520 justify-content-center m_block">
+                
+                <div class="d-flex align-items-center">
+                    <p class="fw_600 pr-3">역선택</p>
+                    <div class="custom_select custom_select_line w_240">
+                        <div class="selected">
+                            <div class="selected-value">역을 선택하세요</div>
+                            <div class="arrow"></div>
+                        </div>
+                        <ul id="stationList">
+                            <li class="option">역을 선택하세요</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn btn-secondary w_190 fw_600 fs_18 m_mt_30" onclick="station.goSearch()">검색하기</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid pt_40px">
+    <div class="row mw_1296">
+        <div class="col">
+                <div class="tab_content p-0  " style="display: inherit;">
+                    <div class="route_map_wrap">
+                        <ul class="route_map">
+                            <li>
+                                <i class="t" onclick="station.marker(1)">아이콘</i>
+                                <div class="text fr">
+                                    <h5 class="fw_600">기흥<br><em>(백남준 아트센터)</em></h5>
+                                    <span>Giheung-NJP Art Center</span>
+                                </div>									
+                                <div class="line on">라인</div>
+                            </li>
+                            <li>
+                                <i onclick="station.marker(2)">아이콘</i>
+                                <div class="text top">
+                                    <h5 class="fw_600">강남대</h5>
+                                    <span>KANGNAM UNIV.</span>
+                                </div>									
+                                <div class="line on">라인</div>						
+                            </li>
+                            <li>
+                                <i onclick="station.marker(3)">아이콘</i>
+                                <div class="text">
+                                    <h5 class="fw_600">지석</h5>
+                                    <span>JISEOK</span>
+                                </div>									
+                                <div class="line on">라인</div>						
+                            </li>
+                            <li>
+                                <i onclick="station.marker(4)">아이콘</i>
+                                <div class="text top">
+                                    <h5 class="fw_600">어정</h5>
+                                    <span>EOJEONG</span>
+                                </div>									
+                                <div class="line on">라인</div>						
+                            </li>
+                            <li>
+                                <i onclick="station.marker(5)">아이콘</i>
+                                <div class="text">
+                                    <h5 class="fw_600">동백</h5>
+                                    <span>DONGBAEK</span>
+                                </div>									
+                                <div class="line on">라인</div>						
+                            </li>
+                            <li>
+                                <i onclick="station.marker(6)">아이콘</i>
+                                <div class="text top">
+                                    <h5 class="fw_600">초당</h5>
+                                    <span>CHODANG</span>
+                                </div>									
+                                <div class="line on">라인</div>						
+                            </li>
+                            <li class="end">
+                                <i onclick="station.marker(7)">아이콘</i>
+                                <div class="text top">
+                                    <h5 class="fw_600">삼가</h5>
+                                    <span>SAMGA</span>
+                                </div>									
+                                <div class="line on se">라인</div>
+                                <div class="round on">라운드</div>						
+                            </li>
+                            <br>
+                            <li class="right">
+                                <div class="box">
+                                    <i class="rotate" onclick="station.marker(8)">아이콘</i>
+                                    <div class="text">
+                                        <h5 class="fw_600">시청.용인대</h5>
+                                        <span>Cityhall.Yongin Univ</span>
+                                    </div>	
+                                </div>													
+                                <div class="line on verti verti02">라인</div>	
+                                <div class="line on verti se se02">라인</div>	
+                            </li>
+                            <br>	
+                            <li class="se r">
+                                <i onclick="station.marker(9)">아이콘</i>
+                                <div class="text">
+                                    <h5 class="fw_600">명지대</h5>
+                                    <span>MYONGJI UNIV.</span>
+                                </div>									
+                                <div class="line on se">라인</div>	
+                                <div class="round on bot">라운드</div>		
+                            </li>
+                            <li class="se">
+                                <i onclick="station.marker(10)">아이콘</i>
+                                <div class="text top">
+                                    <h5 class="fw_600">김량장</h5>
+                                    <span>GIMNYANG JANG</span>
+                                </div>									
+                                <div class="line on">라인</div>						
+                            </li>
+                            <li class="se">
+                                <i onclick="station.marker(11)">아이콘</i>
+                                <div class="text">
+                                    <h5 class="fw_600">운동장·송담대</h5>
+                                    <span>STADIUM·SONGDAM UNIV.</span>
+                                </div>									
+                                <div class="line on">라인</div>
+                            </li>								
+                            <li class="se">
+                                <i onclick="station.marker(12)">아이콘</i>
+                                <div class="text top">
+                                    <h5 class="fw_600">고진</h5>
+                                    <span>GOJIN</span>
+                                </div>									
+                                <div class="line on">라인</div>
+                            </li>								
+                            <li class="se">
+                                <i onclick="station.marker(13)">아이콘</i>
+                                <div class="text">
+                                    <h5 class="fw_600">보평</h5>
+                                    <span>BOPYEONG</span>
+                                </div>									
+                                <div class="line on">라인</div>						
+                            </li>
+                            <li class="se">
+                                <i onclick="station.marker(14)">아이콘</i>
+                                <div class="text top">
+                                    <h5 class="fw_600">둔전</h5>
+                                    <span>DUNJEON</span>
+                                </div>									
+                                <div class="line on">라인</div>						
+                            </li>
+                            <li class="end se">
+                                <i class="t" onclick="station.marker(15)">아이콘</i>
+                                <div class="text fr">
+                                    <h5 class="fw_600">전대·에버랜드</h5>
+                                    <span>JEONDAE·EVERLAND</span>
+                                </div>									
+                                <div class="line on">라인</div>										
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid pt-7 pb-7">
+    <div class="row align-items-center mw_1296 text-center station_row m_mx_12">
+
+        <div class="col-3 p-0">
+            <div class="station_left">
+                <div>
+                    <p id="nameLeft" class="fs_24 fw_700"></p>
+                    <p id="nameLeftEng"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col p-0">
+            <div class="station_center">
+                <div>
+                    <p id="name" class="fs_36 fw_700"></p>
+                    <p id="nameEng" class="fs_28 color_6c"></p>
+                </div>
+            </div>
+            <div class="station_line"></div>
+        </div>
+        <div class="col-3 p-0">
+            <div class="station_right">
+                <div>
+                    <p id="nameRight" class="fs_24 fw_700"></p>
+                    <p id="nameRightEng"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container-fluid pb-8">
+    <div class="row mw_1296">
+        <div class="col">
+            <div class="tabs_wrap">
+
+                <ul class="tabs tab_50percent">
+                    <li class="fs_18 fw_600 tab_link active" data-tab="tab_0">기흥행
+                        <div></div>
+                    </li>
+                    <li class="fs_18 fw_600 tab_link" data-tab="tab_1">전대행
+                        <div></div>
+                    </li>
+                </ul>
+
+                <div id="tab_0" class="tab_content active tab_50_c">
+                    <div class="color_point point_ico2 fs_20 fw_600">
+                        <img src="https://youninsubway.s3.amazonaws.com/images/ico/ico_txt.png" class="img-fluid mr-1">
+                        첫차/막차 시간
+                    </div>
+                    <table class="nt">
+                        <tr>
+                            <th rowspan="2">현재시간</th>
+                            <th rowspan="2">시</th>
+                            <th colspan="2">분</th>
+                        </tr>
+                        <tr>
+                            <th>평일</th>
+                            <th>토-일요일, 공휴일</th>
+                        </tr>
+                        <tr>
+                            <td>첫차</td>
+                            <td id="firstHour0"></td>
+                            <td id="firstMin0"></td>
+                            <td id="firstMinHoliday0"></td>
+                        </tr>
+                        <tr>
+                            <td>막차</td>
+                            <td id="lastHour0"></td>
+                            <td id="lastMin0"></td>
+                            <td id="lastMinHoliday0"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="tab_1" class="tab_content tab_50_c">
+                    <div class="color_point point_ico2 fs_20 fw_600 fs_18">
+                        <img src="https://youninsubway.s3.amazonaws.com/images/ico/ico_txt.png" class="img-fluid mr-1">
+                        첫차/막차 시간
+                    </div>
+                    <table class="nt">
+                        <tr>
+                            <th rowspan="2">현재시간</th>
+                            <th rowspan="2">시</th>
+                            <th colspan="2">분</th>
+                        </tr>
+                        <tr>
+                            <th>평일</th>
+                            <th>토-일요일, 공휴일</th>
+                        </tr>
+                        <tr>
+                            <td>첫차</td>
+                            <td id="firstHour1"></td>
+                            <td id="firstMin1"></td>
+                            <td id="firstMinHoliday1"></td>
+                        </tr>
+                        <tr>
+                            <td>막차</td>
+                            <td id="lastHour1"></td>
+                            <td id="lastMin1"></td>
+                            <td id="lastMinHoliday1"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <table class="nt">
+                    <tr>
+                        <th rowspan="2">운영시간</th>
+                        <th colspan="2">운행간격</th>                        
+                    </tr>
+                    <tr>
+                        <th>평일</th>
+                        <th>토-일요일, 공휴일</th>
+                    </tr>
+                    <tr>
+                        <td class="fw_700">5:30 ~ 7:00</td>
+                        <td>10 분 (min.)</td>
+                        <td>10 분 (min.)</td>
+                    </tr>
+                    <tr>
+                        <td class="fw_700">7:00 ~ 9:00</td>
+                        <td>3 분 (min.)</td>
+                        <td>6 분 (min.)</td>
+                    </tr>
+                    <tr>
+                        <td class="fw_700">9:00 ~ 17:00</td>
+                        <td>6 분 (min.)</td>
+                        <td>6 분 (min.)</td>
+                    </tr>
+                    <tr>
+                        <td class="fw_700">17:00 ~ 20:00</td>
+                        <td>4 분 (min.)</td>
+                        <td>6 분 (min.)</td>
+                    </tr>
+                    <tr>
+                        <td class="fw_700">20:00 ~ 21:00</td>
+                        <td>6 분 (min.)</td>
+                        <td>6 분 (min.)</td>
+                    </tr>
+                    <tr>
+                        <td class="fw_700">21:00 ~ 22:00</td>
+                        <td>6 분 (min.)</td>
+                        <td>10 분 (min.)</td>
+                    </tr>
+                    <tr>
+                        <td class="fw_700">22:00 ~ 23:30</td>
+                        <td>10 분 (min.)</td>
+                        <td>10 분 (min.)</td>
+                    </tr>
+                    <tr>
+                        <td class="fw_700">23:30 ~ 00:00</td>
+                        <td>30 분 (min.)</td>
+                        <td>30 분 (min.)</td>
+                    </tr>
+                </table>
+                <p class="fs_18 pt_20px color_point fw_600">※ 상기 운행시간은 열차 운행 사정에 따라 변경될 수 있습니다.
+                </p>
+
+
+
+                <div class="color_point point_ico2 fs_20 fw_600 pt-5_2 fs_18">
+                    <img src="https://youninsubway.s3.amazonaws.com/images/ico/ico_txt.png" class="img-fluid mr-1">
+                    역사별 첫차/막차 안내
+                </div>
+                <div class="pt-5">
+                </div>
+                <table class="nt">
+                    <tr>
+                        <th colspan="2">구분</th>
+                        <th>기흥행</th>
+                        <th>전대행</th>
+                    </tr> 
+                    <tr>
+                        <td rowspan="2">기흥</td>
+                        <td>첫차</td>
+                        <td>-</td>
+                        <td>05:30</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <!-- <td>-</td> -->
+                        <td>23:30</td>
+                        <td>23:30</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">강남대</td>
+                        <td>첫차</td>
+                        <td>05:37</td>
+                        <td>05:31</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:57</td>
+                        <td>23:31</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">지석</td>
+                        <td>첫차</td>
+                        <td>05:35</td>
+                        <td>05:33</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:55</td>
+                        <td>23:33</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">어정</td>
+                        <td>첫차</td>
+                        <td>05:34</td>
+                        <td>05:35</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:53</td>
+                        <td>23:35</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">동백</td>
+                        <td>첫차</td>
+                        <td>05:32</td>
+                        <td>05:37</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:51</td>
+                        <td>23:37</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">초당</td>
+                        <td>첫차</td>
+                        <td>05:30</td>
+                        <td>05:30</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:49</td>
+                        <td>23:39</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">삼가</td>
+                        <td>첫차</td>
+                        <td>05:36</td>
+                        <td>05:33</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:45</td>
+                        <td>23:42</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">시청 · 용인대</td>
+                        <td>첫차</td>
+                        <td>05:35</td>
+                        <td>05:35</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:44</td>
+                        <td>23:44</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">명지대</td>
+                        <td>첫차</td>
+                        <td>05:33</td>
+                        <td>05:36</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:42</td>
+                        <td>23:46</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">김량장</td>
+                        <td>첫차</td>
+                        <td>05:31</td>
+                        <td>05:38</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:40</td>
+                        <td>23:47</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">운동장 · 송담대</td>
+                        <td>첫차</td>
+                        <td>05:30</td>
+                        <td>05:30</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:39</td>
+                        <td>23:49</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">고진</td>
+                        <td>첫차</td>
+                        <td>05:37</td>
+                        <td>05:31</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:37</td>
+                        <td>23:51</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">보평</td>
+                        <td>첫차</td>
+                        <td>05:35</td>
+                        <td>05:34</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:35</td>
+                        <td>23:53</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">둔전</td>
+                        <td>첫차</td>
+                        <td>05:33</td>
+                        <td>05:35</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:33</td>
+                        <td>23:55</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">전대 · 에버랜드</td>
+                        <td>첫차</td>
+                        <td>05:30</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>막차</td>
+                        <td>23:30</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+
+            </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://youninsubway.s3.amazonaws.com/stationData.js"></script>
+<script>
+//탭
+$(document).ready(function () {
+
+    $('ul.tabs li').click(function () {
+        var tab_id = $(this).attr('data-tab');
+
+        $('ul.tabs li').removeClass('active');
+        $('.tab_content').removeClass('active');
+
+        $(this).addClass('active');
+        $("#" + tab_id).addClass('active');
+        station.drawData();
+    });
+
+    station.init();
+
+})
+//셀렉트
+const selectBoxElements = document.querySelectorAll(".custom_select");
+
+function toggleSelectBox(selectBox) {
+    selectBox.classList.toggle("active");
+}
+
+function selectOption(optionElement) {
+    const selectBox = optionElement.closest(".custom_select");
+    const selectedElement = selectBox.querySelector(".selected-value");
+    selectedElement.textContent = optionElement.textContent;
+}
+
+selectBoxElements.forEach(selectBoxElement => {
+    selectBoxElement.addEventListener("click", function (e) {
+        const targetElement = e.target;
+        const isOptionElement = targetElement.classList.contains("option");
+
+        if (isOptionElement) {
+            selectOption(targetElement);
+        }
+
+        toggleSelectBox(selectBoxElement);
+    });
+});
+
+document.addEventListener("click", function (e) {
+    const targetElement = e.target;
+    const isSelect = targetElement.classList.contains("select") || targetElement.closest(".custom_select");
+
+    if (isSelect) {
+        return;
+    }
+
+    const allSelectBoxElements = document.querySelectorAll(".custom_select");
+
+    allSelectBoxElements.forEach(boxElement => {
+        boxElement.classList.remove("active");
+    });
+});
+
+var station = {
+    id : 1,
+    current : null,
+    lang : 'ko',
+
+    init : ()=>{
+        station.drawSelect();
+        if(utils?.getParamFromUrl('id') != null){
+            station.id = utils.getParamFromUrl('id');
+        }
+        if(utils?.getParamFromUrl('dir') != null){
+            station.dir = utils.getParamFromUrl('dir');
+        }
+        station.current = stationData.find(e=>e.id==station.id);
+        console.log(station.current);
+        station.drawData();
+    },
+
+    setId : (id)=> {
+        station.id = id;
+        console.log(station.id);
+    },
+
+    goSearch : ()=>{
+        location.href=`/page/?M2_IDX=28909&id=${station.id}`;
+    },
+
+    marker : (id)=>{
+        location.href=`/page/?M2_IDX=28909&id=${id}`;
+    },
+
+    drawSelect : ()=> {
+        $list = $('#stationList');
+        $.each(stationData, (i, item)=>{
+            let name;
+            if(station.lang=='ko' ){
+                if(item.descriptionKo != ""){
+                    name = item.nameKo+"("+item.descriptionKo+")";
+                }else{
+                    name = item.nameKo;
+                }
+            }else{
+                name = item.nameEn;
+            }
+            let $li = $('<li>').addClass('option').attr('onclick', `station.setId(${item.id})`).val(item.id).html(name);
+            $list.append($li)
+        });
+    },
+
+    drawData : ()=>{
+        let leftStation = stationData.find(e=>e.id == station.current.id-1);
+        let rightStation = stationData.find(e=>e.id == station.current.id+1);
+        // if(station.lang == 'ko'){
+            let name;
+            if(station.current.descriptionKo != ""){
+                name = station.current.nameKo+"("+station.current.descriptionKo+")";
+            }else{
+                name = station.current.nameKo;
+            }
+
+            $('#name').html(name);
+            $('#nameEng').html(station.current.nameEn);
+            if(leftStation != null){
+                let name;
+                if(leftStation.descriptionKo != ""){
+                    name = leftStation.nameKo+"("+leftStation.descriptionKo+")";
+                }else{
+                    name = leftStation.nameKo;
+                }
+                $('#nameLeft').html(name);
+                $('#nameLeftEng').html(leftStation.nameEn);
+            }else{
+                $('nameLeft').html('역없음');
+            }
+            if(rightStation != null){
+                let name;
+                if(rightStation.descriptionKo != ""){
+                    name = rightStation.nameKo+"("+rightStation.descriptionKo+")";
+                }else{
+                    name = rightStation.nameKo;
+                }                
+                $('#nameRight').html(name);
+                $('#nameRightEng').html(rightStation.nameEn);
+            }else{
+                $('nameRight').html('역없음');
+            }  
+
+        $('#firstHour0').html(station.current.times.first[0].hour);
+        $('#firstMin0').html(station.current.times.first[0].min);    
+        $('#firstMinHoliday0').html(station.current.times.first[0].minHoliday);
+
+        $('#lastHour0').html(station.current.times.last[0].hour);
+        $('#lastMin0').html(station.current.times.last[0].min);
+        $('#lastMinHoliday0').html(station.current.times.last[0].minHoliday);    
+
+        $('#firstHour1').html(station.current.times.first[1].hour);
+        $('#firstMin1').html(station.current.times.first[1].min);    
+        $('#firstMinHoliday1').html(station.current.times.first[1].minHoliday);
+
+        $('#lastHour1').html(station.current.times.last[1].hour);
+        $('#lastMin1').html(station.current.times.last[1].min);
+        $('#lastMinHoliday1').html(station.current.times.last[1].minHoliday);    
+    },
+
+
+
+}
+</script>

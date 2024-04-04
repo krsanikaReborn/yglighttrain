@@ -1,0 +1,429 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://youninsubway.s3.amazonaws.com/en/css/index.css">
+
+    <div class="container-fluid">
+        <!-- <div id="mainTop1" class="main_top"></div> -->
+        <div id="bannerSwiper" class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div id="mainTop1" class="main_top"></div>
+                </div>    
+                <div class="swiper-slide">
+                    <div id="mainTop2" class="main_top"></div>
+                </div>    
+            </div>
+            <div id="bannerPagination" class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt_40px" id="main_section02">
+        <div class="row align-items-end mw_1296">
+            <div class="col-sm-4 m_p_0">
+                <div class="bg_point border_r5 color_fff m_border_r0 tempBlueBox">
+                    <div class="fs_20 fw_600">Departure Station<br>
+                        and Arrival Station retrieve</div>
+
+
+                    <div class="pt_10px">
+                        Please select station for line and fare information.
+                    </div>
+
+                    <div class="custom_select mt_20px">
+                        <div class="selected">
+                            <div class="selected-value">Departure station</div>
+                            <div class="arrow"></div>
+                        </div>
+                        <ul id="departure" class="stationPopup">
+                            <li class="option">Departure station</li>
+                            <li class="option" onclick="station.setId(true, 1)">GIHEUNG-NJP-ART CENTER</li>
+                            <li class="option" onclick="station.setId(true, 2)">KANGNAM UNIV.</li>
+                            <li class="option" onclick="station.setId(true, 3)">JISEOK</li>
+                            <li class="option" onclick="station.setId(true, 4)">EOJEONG</li>
+                            <li class="option" onclick="station.setId(true, 5)">DONGBAEK</li>
+                            <li class="option" onclick="station.setId(true, 6)">CHODANG</li>
+                            <li class="option" onclick="station.setId(true, 7)">SAMGA</li>
+                            <li class="option" onclick="station.setId(true, 8)">CITYHALL · YONGIN UNIV.</li>
+                            <li class="option" onclick="station.setId(true, 9)">MYONGJI UNIV.</li>
+                            <li class="option" onclick="station.setId(true, 10)">GIMNYANGJANG</li>
+                            <li class="option" onclick="station.setId(true, 11)">STADIUM · SONGDAM UNIV.</li>
+                            <li class="option" onclick="station.setId(true, 12)">GOJIN</li>
+                            <li class="option" onclick="station.setId(true, 13)">BOPYEONG</li>
+                            <li class="option" onclick="station.setId(true, 14)">DUNJEON</li>
+                            <li class="option" onclick="station.setId(true, 15)">JEONDAE · EVERLAND</li>
+                        </ul>
+                    </div>
+                    <div class="custom_select mt_14px">
+                        <div class="selected">
+                            <div class="selected-value">Arrival station</div>
+                            <div class="arrow"></div>
+                        </div>
+                        <ul id="arrival" class="stationPopup">
+                            <li class="option">Arrival station</li>
+                            <li class="option" onclick="station.setId(false, 1)">GIHEUNG-NJP-ART CENTER</li>
+                            <li class="option" onclick="station.setId(false, 2)">KANGNAM UNIV.</li>
+                            <li class="option" onclick="station.setId(false, 3)">JISEOK</li>
+                            <li class="option" onclick="station.setId(false, 4)">EOJEONG</li>
+                            <li class="option" onclick="station.setId(false, 5)">DONGBAEK</li>
+                            <li class="option" onclick="station.setId(false, 6)">CHODANG</li>
+                            <li class="option" onclick="station.setId(false, 7)">SAMGA</li>
+                            <li class="option" onclick="station.setId(false, 8)">CITYHALL · YONGIN UNIV.</li>
+                            <li class="option" onclick="station.setId(false, 9)">MYONGJI UNIV.</li>
+                            <li class="option" onclick="station.setId(false, 10)">GIMNYANGJANG</li>
+                            <li class="option" onclick="station.setId(false, 11)">STADIUM · SONGDAM UNIV.</li>
+                            <li class="option" onclick="station.setId(false, 12)">GOJIN</li>
+                            <li class="option" onclick="station.setId(false, 13)">BOPYEONG</li>
+                            <li class="option" onclick="station.setId(false, 14)">DUNJEON</li>
+                            <li class="option" onclick="station.setId(false, 15)">JEONDAE · EVERLAND</li>
+                        </ul>
+                    </div>
+
+
+                    <button type="button" class="btn btn-outline-light w-100 mt_20px"
+                        onclick="station.goSearch()">Search</button>
+                </div>
+            </div>
+
+            <div class="col-sm-8 m_pt_30">
+
+                <div class="fs_20 color_point">"Yongin Everline" <span class="fw_600">Easy User Guide</span></div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class=" gray_box bg_gray align-items-center cursor_p"
+                            onclick="window.open('https://everlinecu.com/yong/index.do', 'window_name', 'width=1000, height=470, location=no, status=no, scrollbars=no');">
+                            <img src="https://youninsubway.s3.amazonaws.com/images/ico/my_location.png"
+                                class="img-fluid mr-3">
+                            <div class="d-block">
+                                <div class="fs_20 fw_600 color_point">
+                                    Real-time train Information
+                                </div>
+                                <div class="m_fs_12 color_5B5B5B">
+                                    Real-time train operation information
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 ">
+                        <div class="gray_box bg_gray align-items-center cursor_p"
+                            onclick="location.href='/page/?M2_IDX=29236'">
+                            <img src="https://youninsubway.s3.amazonaws.com/images/ico/distance.png"
+                                class="img-fluid mr-3">
+                            <div class="d-block">
+                                <div class="fs_20 fw_600 color_point">
+                                    Line Map
+                                </div>
+                                <div class="m_fs_12 color_5B5B5B">
+                                    From GIHEUNG to JEONDAE-EVERLAND
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class=" gray_box bg_gray align-items-center cursor_p"
+                            onclick="location.href='/page/?M2_IDX=29237'">
+                            <img src="https://youninsubway.s3.amazonaws.com/images/ico/more_time.png"
+                                class="img-fluid mr-3">
+                            <div class="d-block">
+                                <div class="fs_20 fw_600 color_point">
+                                    Operation Time
+                                </div>
+                                <div class="m_fs_12 color_5B5B5B">
+                                    From first train to last train
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="gray_box bg_gray align-items-center cursor_p"
+                            onclick="location.href='/page/?M2_IDX=29236&tab=4'">
+                            <img src="https://youninsubway.s3.amazonaws.com/images/ico/confirmation_number.png"
+                                class="img-fluid mr-3">
+                            <div class="d-block">
+                                <div class="fs_20 fw_600 color_point">
+                                    Fare Guide
+                                </div>
+                                <div class="m_fs_12 color_5B5B5B">
+                                    Adults, Youths, Children and Age 6 and under
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid mt_30px" id="main_sec3">
+        <div class="row align-items-center mw_1296">
+            <div class="col-sm mt-5">
+
+                <div class="row mx-0">
+                    <div class="col-sm bg_trans notice_box02 justify-content-center">
+                        <img src="https://youninsubway.s3.amazonaws.com/images/ico/support_agent.png"
+                            class="img-fluid">
+                        <div class="fs_24 ml-4 mr-3 mt-1 m_mx_0">Service</div>
+                        <div class="fs_30 fw_600"><a href="tel:0313293500">031 - 329 - 3500</a></div>
+                    </div>
+                    <div class="col-sm bg_trans notice_box02 m_mt_20">
+                        <img src="https://youninsubway.s3.amazonaws.com/images/ico/content_paste_search.png" class="img-fluid">
+                        <div class="fs_24 ml-4 mr-3 mt-1 m_mx_0">Lost & Found Center</div>
+                        <div class="fs_30 fw_600"><a href="tel:0313293551">031 - 329 - 3551</a></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-sm">
+                <div id="introSwiper" class="">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="https://www.letskorail.com/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image154.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.yicf.or.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image155.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="http://www.shinbundang2.co.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image156.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.ictr.or.kr/main/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image157.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.metro9.co.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image158.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="http://www.kric.go.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image161.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="http://www.seoulmetro.co.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image162.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.dtro.or.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image164.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.ggfc.or.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image165.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.djtc.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image166.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.ulrt.co.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image167.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.bglrt.com/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image168.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.arex.or.kr">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image169.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.yongin.go.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image170.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.shinbundang.co.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image171.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.grtc.co.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image172.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="http://www2.humetro.busan.kr/">
+                                <img src="https://youninsubway.s3.amazonaws.com/images/logo/image175.png"
+                                    class="img-fluid companies">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="introPagination" class="swiper-pagination"></div>
+                    <!-- <div class="text-center">
+                    <div id="introNext" class="swiper-button-next"></div>
+                    <div id="introPrev" class="swiper-button-prev"></div>    
+                </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        let realtime = "https://everlinecu.com/yong/index.do";
+
+        $(function () {
+            //협력사 스와이퍼                    
+            let ww = $('body').width();
+            let introOptions = {
+                loop : true,
+                speed: 2000,
+                loopedSlides: 1, 
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: true,
+                },
+                // centeredSlides: true,
+                spaceBetween: 0,
+                slidesPerView: 4,
+
+                breakpoints: {
+                    1300: {
+                        slidesPerView: 13,
+                        // navigation : {
+                        //     nextEl : '#introNext',
+                        //     prevEl : '#introPrev'
+                        // },
+                    }
+                }
+            };
+            //모바일대응
+            // introOptions.slidesPerView = ww > 586 ? 15 : 10; 
+            let introSwiper = new Swiper("#introSwiper", introOptions);
+
+            // //메인배너 스와이퍼
+            let bannerSwiper = new Swiper('#bannerSwiper', {
+                loop: true,
+                speed: 2000,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: true,
+                },
+                // loopedSlides: 1,
+                pagination: {
+                    el: "#bannerPagination",
+                    clickable: true,
+                    clickableClass: "#bannerPagination",
+                },
+                breakpoints: {
+                    1365: {
+
+                    }
+                }
+
+            });
+
+            //역선택 창이 푸터에 파뭍히는 이슈
+            $('.nx-col>div').append($('footer'));
+        });
+
+        //셀렉트
+        const selectBoxElements = document.querySelectorAll(".custom_select");
+
+        function toggleSelectBox(selectBox) {
+            selectBox.classList.toggle("active");
+        }
+
+        function selectOption(optionElement) {
+            const selectBox = optionElement.closest(".custom_select");
+            const selectedElement = selectBox.querySelector(".selected-value");
+            selectedElement.textContent = optionElement.textContent;
+        }
+
+        selectBoxElements.forEach(selectBoxElement => {
+            selectBoxElement.addEventListener("click", function (e) {
+                const targetElement = e.target;
+                const isOptionElement = targetElement.classList.contains("option");
+
+                if (isOptionElement) {
+                    selectOption(targetElement);
+                }
+
+                toggleSelectBox(selectBoxElement);
+            });
+        });
+
+        document.addEventListener("click", function (e) {
+            const targetElement = e.target;
+            const isSelect = targetElement.classList.contains("select") || targetElement.closest(".custom_select");
+
+            if (isSelect) {
+                return;
+            }
+
+            const allSelectBoxElements = document.querySelectorAll(".custom_select");
+
+            allSelectBoxElements.forEach(boxElement => {
+                boxElement.classList.remove("active");
+            });
+        });
+
+        //조회하기
+        let station = {
+            idStart: null,
+            idEnd: null,
+            setId: (isStart, idStation) => {
+                if (isStart) {
+                    station.idStart = idStation;
+                } else {
+                    station.idEnd = idStation;
+                }
+                console.log(station.idStart, station.iEnd);
+            },
+            goSearch: () => {
+                if (utils.isNull(station.idStart) || utils.isNull(station.idEnd)) {
+                    alert('Please Select Stations.')
+                    return false;
+                }
+                if (station.idStart == station.idEnd) {
+                    alert('Start and End Station can not same.')
+                    return false;
+                }
+                let href = `/page/?M2_IDX=29236&start=${station.idStart}&end=${station.idEnd}`;
+                location.href = href;
+            }
+        }
+    </script>

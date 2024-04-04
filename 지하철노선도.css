@@ -1,0 +1,576 @@
+
+/*지하철노선도*/
+
+
+.route_map_wrap {
+    width: 100%;
+    margin-top: 160px;
+}
+
+.route_map:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.route_map.se {
+    padding-top: 20px;
+    height: 115px;
+}
+
+.route_map li {
+    position: relative;
+    float: left;
+    height: 85px;
+}
+
+.route_map li.right {
+    float: right;
+    margin-top: 20px;
+    margin-right: -1px;
+}
+
+.route_map li.right span.box {
+    font-size: 14px;
+}
+
+.route_map li.right div.box {
+    font-size: 14px;
+}
+
+.route_map li.se {
+    float: right;
+    margin-top: 125px;
+}
+
+.route_map li.se.r {
+    margin-right: -18px;
+}
+
+.custom label.ch_label02 {
+    float: none;
+    width: 30px;
+    margin-left: 5px
+}
+
+.infor_ok {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #3d3d3d;
+}
+
+.btn_bot {
+    margin-bottom: 40px
+}
+
+.btn_bot .btn_c {
+    background-color: #6fb245;
+    color: #fff !important;
+    border: none
+}
+
+@media \0screen {
+    .route_map li.se.r {
+        margin-right: -20px;
+    }
+}
+
+.route_map li i {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 31px;
+    height: 31px;
+    text-indent: 200%;
+    background: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 999;
+    border: 3px solid #6fb245;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    box-sizing: border-box;
+    behavior: url(PIE.htc);
+}
+
+.route_map li i:after {
+    position: absolute;
+    content: '';
+    top: 4px;
+    left: 4px;
+    width: 17px;
+    height: 17px;
+    background: #6fb245;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+}
+
+.route_map li i.t {
+    background: url(/images/station_t_icon.svg) no-repeat 0;
+    background-size: 25px;
+}
+
+@media \0screen {
+    .route_map li i {
+        position: relative;
+        display: inline-block;
+        float: left;
+        width: 32px;
+        height: 32px;
+        background: url(/images/station_icon.png) no-repeat;
+        text-indent: 200%;
+        white-space: nowrap;
+        overflow: hidden;
+        z-index: 10;
+        box-sizing: border-box;
+        border: 0;
+    }
+
+    .route_map li i:after {
+        display: none;
+    }
+
+    .route_map li.right {
+        margin-right: -8px;
+    }
+
+    .route_map li i.t {
+        background: url(/images/station_t_icon.png) no-repeat 2px 0;
+    }
+}
+
+.route_arrow {
+    display: inline-block;
+    margin: 11px 7px 0 11px;
+}
+
+.route_map li i.t:after {
+    content: '';
+    display: none;
+}
+
+.route_map li .line {
+    position: relative;
+    float: left;
+    width: 169px;
+    height: 6px;
+    margin-top: 12px;
+    margin-left: -2px;
+    background: #c9c9c9;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.route_map li .line.se {
+    width: 18px;
+}
+
+.route_map li .line.verti {
+    width: 6px;
+    height: 78px;
+    margin-left: -19px;
+    margin-top: -68px;
+}
+
+.route_map li .line.verti.se {
+    margin-top: 20px;
+}
+
+.route_map li .line.on {
+    background: #67473c;
+}
+
+.route_map li .round {
+    position: relative;
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin-top: 12px;
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+    behavior: url(PIE.htc);
+}
+
+.route_map li .round.on:after {
+    border: 6px solid #67473c;
+}
+
+.route_map li .round:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -100%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border: 6px solid #c9c9c9;
+    box-sizing: border-box;
+    z-index: 1;
+    behavior: url(PIE.htc);
+}
+
+.route_map li .round.bot {
+    margin-top: -7px;
+}
+
+.route_map li .round.re {
+    left: 0;
+}
+
+.route_map li .round.bot:after {
+    top: -100%;
+}
+
+.route_map li .text {
+    position: absolute;
+    width: 140px;
+    top: 42px;
+    left: 0;
+    display: inline-block;
+    margin-left: -54px;
+}
+
+.route_map li .text.top {
+    top: -38px;
+}
+
+.route_map li.right .text {
+    top: 0;
+    margin-left: -143px;
+}
+
+.route_map li h5 {
+    display: block;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 3px;
+    line-height: 1.2;
+}
+
+.route_map li h5 em {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.route_map li span {
+    display: block;
+    color: #6d6d6d;
+    text-align: center;
+    font-size: 12px;
+}
+
+.route_map li.right h5,
+.route_map li.right span {
+    text-align: right;
+}
+
+.route_map .click_event_wrap {
+    position: absolute;
+    top: -62px;
+    left: 0;
+    width: 146px;
+    height: 62px;
+    z-index: 99;
+    margin-left: -63px;
+    overflow: hidden;
+}
+
+.route_map .click_event {
+    position: relative;
+    width: 146px;
+    height: 43px;
+    background: rgba(0, 0, 0, .2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,
+            endColorstr=#33000000);
+    zoom: 1;
+    /* 일반적이진 않지만 ie6, 7 에서 적용 안되는경우 선언. */
+    z-index: 99;
+}
+
+.route_map .click_event:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.route_map .click_event_wrap .stick {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 79px;
+    width: 3px;
+    height: 50px;
+    background: #67473c;
+    z-index: 1;
+}
+
+.route_map .click_event .head {
+    float: left;
+    width: 42px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #fff;
+    background: #67473c;
+    text-align: center;
+    z-index: 99;
+}
+
+.route_map .click_event .name {
+    position: relative;
+    float: left;
+    display: block;
+    width: 104px;
+    height: 40px;
+    border: 1px solid #67473c;
+    background: #fff;
+    box-sizing: border-box;
+    z-index: 99;
+    padding-top: 0;
+}
+
+.route_map .click_event .name .txt {
+    display: table;
+    vertical-align: middle;
+    color: #000000;
+    line-height: 1.2;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.route_map .click_event .name .txt strong {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.route_map .click_event_wrap.bottom {
+    top: 31px;
+}
+
+.route_map .click_event_wrap.right {
+    top: -50px;
+}
+
+.route_map .click_event_wrap.right .stick {
+    display: none;
+}
+
+.route_map .click_event_wrap.bottom .click_event {
+    position: absolute;
+    bottom: 0;
+}
+
+.route_map .click_event_wrap.bottom .stick {
+    top: 0;
+}
+
+@media screen  and (max-width: 767px) {
+   
+	.mo {
+		display: block;
+	}
+    .route_map_wrap {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .route_map {
+        line-height: 85px;
+    }
+
+    .route_map li {
+        width: 14.2%;
+    }
+
+    .route_map li.end {
+        width: 14.8%;
+        float: right;
+    }
+
+    .route_map li.end .line {
+        margin-left: 0;
+    }
+
+    .route_map li i {
+        background-color: #fff;
+        z-index: 5;
+    }
+
+    .route_map li h5 {
+        font-size: .75em;
+    }
+
+    .route_map li span {
+        font-size: .65em;
+    }
+
+    .route_map li .line {
+        position: absolute;
+        width: 100%;
+        margin-left: 10%;
+    }
+
+    .route_map li .line.se {
+        width: 100%;
+    }
+
+    .route_map li .round {
+        /*display:none;*/
+        float: right;
+        position: absolute;
+        right: 0;
+        background: #fff;
+        z-index: 1;
+    }
+
+    .route_map li .text.fr {
+        margin-left: 0;
+        width: 150%;
+    }
+
+    .route_map li .text.fr h5,
+    .route_map li .text.fr span {
+        text-align: left;
+        word-break: break-all;
+    }
+
+    .route_map li h5 em {
+        font-size: 0.7em;
+    }
+
+    .route_map li .text.top {
+        top: -22px;
+    }
+
+    .route_map li .line.verti {
+        width: 4px;
+        height: 60px;
+        margin-left: 0px;
+        margin-top: -133px;
+        right: 1px;
+    }
+
+    .route_map li .line.verti.se {
+        margin-top: -61px;
+    }
+
+    /* 20161209 추가 */
+    .route_map li .line.verti02 {
+        width: 4px;
+        height: 60px;
+        margin-left: 0px;
+        margin-top: 18px;
+        right: 1px;
+    }
+
+    .route_map li .line.verti.se02 {
+        margin-top: -48px;
+    }
+
+    .route_map li.right a,
+    .route_map li.right span {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .route_map li.right {
+        position: relative;
+        margin-top: 0;
+        width: 13.9%;
+        margin-right: 0;
+    }
+
+    .route_map li.right i {
+        float: right;
+        margin-right: -7px;
+    }
+
+    .route_map li.se {
+        margin-top: 0;
+    }
+
+    .route_map li.se.r {
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+
+    .route_map li.se.r .line {
+        margin-left: 0;
+    }
+
+    .route_map li.right .text {
+        margin-left: -0;
+        right: 26px;
+        top: 3px;
+        left: auto;
+    }
+
+    .route_map .click_event_wrap {
+        top: -56px;
+        margin-left: -71px;
+    }
+
+    .route_map .click_event_wrap.bottom {
+        top: 24px;
+    }
+
+    .route_map li i {
+        top: 5px;
+        width: 20px;
+        height: 20px;
+        border-width: 2px;
+    }
+
+    .route_map li i.t {
+        background-size: 16px;
+    }
+
+    .route_map li i:after {
+        top: 2px;
+        left: 2px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .route_map li .text {
+        top: 30px;
+        width: 125px;
+    }
+
+    .route_map li .line {
+        height: 4px;
+        margin-top: 13px;
+    }
+
+    .route_map li .round:after {
+        top: 1px;
+        margin-left: -1px;
+        border: 4px solid #c9c9c9;
+    }
+
+    .route_map li .round.on:after {
+        border-width: 4px;
+    }
+
+    .route_map li .round.bot {
+        margin-top: -8px;
+    }
+
+    .route_arrow {
+        display: none;
+    }
+}

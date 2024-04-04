@@ -1,0 +1,167 @@
+
+.subway_wrap {
+    width: 100%;
+    position: relative;
+}
+.sub_line {    
+    border-top: 6px solid var(--green);
+    position: relative;
+    top: 6px;
+    z-index: 1;
+    width: 100%;
+}
+
+.line_right {    
+	height: 150px;
+    background-repeat: no-repeat;
+    border-top: 0;
+    left: 0;
+    border-top-right-radius: 296px;
+    border: 6px solid var(--green);
+    position: absolute;
+    clip: rect( 0, 162px, 144px, 18px);
+}
+.line_right2 {
+    height: 150px;
+    background-repeat: no-repeat;
+    border-top: 0;
+    left: -152px;
+    border-bottom-right-radius: 296px;
+    border: 6px solid var(--green);
+    position: absolute;
+    clip: rect( 6px,162px, 150px, 6px);
+    top: -28px;
+}
+
+.subway_dot {
+    position: relative;
+    z-index: 2;
+    width: 20px;
+    height: 18px;
+    border-radius: 100px;
+    border: 2px solid var(--green);
+	background: #fff;
+}
+.dot_large {
+    width: 35px;
+    height: 30px;
+    border: 5px solid #373737;
+    top: -7px;
+}
+.subway_txt {
+    float: left;
+    width: 160px;
+    z-index: 10;
+    position: relative;
+    
+}
+.station {
+    position: relative;
+    top: 0;
+    float: left;
+}
+
+.line_dot_wrap {
+    position: relative;
+    left: 67px;
+	max-width: 160px;
+	width: 100%;
+}
+
+.txt_up {
+    top: -75px;
+    position: relative;
+}
+.txt_up_middle {
+    position: relative;
+    left: -112px;
+    top: -69px;
+}
+.station_middle {
+	top: 100px;
+}
+
+.radius_svg .subway_dot{
+	position: relative;
+    top: -30px;
+    left: -4px;
+    width: 18px;
+    height: 18px;
+}
+.m_right_dot {
+	width: 18px;
+}
+.subway_wrap2 {
+	top: 210px;
+    right: 146px;
+}
+.subway_wrap2 .subway_txt {
+    width: 158px;
+	max-width: 158px;
+    
+}
+.myongji_dot {
+    top: 92px;
+    left: -93px;
+    position: relative;
+    position: relative;
+}
+.myongji_dot .subway_dot {
+    width: 18px;
+}
+.myongji {
+    position: absolute;
+    top: 130px;
+    left: -197px;
+}
+@media screen and (max-width:1290px) {
+	.station_middle {
+		top: 167px;
+		right: -52px;
+		position: absolute;
+	}
+	.subway_wrap2 {
+		right: 0;
+	}
+}
+@media screen and (max-width:1145px) {
+	.subway_txt {
+		width: 100%;
+		max-width: 100%;
+	}
+	.subway_txt br {
+		display: block;
+	}
+}
+@media screen and (max-width:768px) {
+	.line_dot_wrap {
+		left: 10px;
+		max-width: 40px;
+	}
+	.station {
+		width: 40px;
+	}
+	.line_right {
+		height: 150px;
+		left: -4px;
+		border-top-right-radius: 39px;
+		clip: rect( 0, 150px, 143px, 22px);
+		top: -3px;
+	}
+	.subway_dot {
+		width: 20px;
+		top: 2px;
+		height: 14px;
+	}.dot_large {
+		width: 38px;
+		height: 23px;
+		top: -2px;
+	}
+	.m_right_dot {
+		width: 14px;
+	}
+	
+}
+
+
+

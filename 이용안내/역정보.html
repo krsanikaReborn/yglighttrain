@@ -1,0 +1,340 @@
+<div class="container-fluid sub_top_01_01 top_height">
+    <div class="row align-items-center mw_1296">
+        <div class="col color_fff text-center">
+            <p class="fs_20">생활은 <span class="fw_600">편리하게</span>, 환경은 <span class="fw_600">아름답게</span></p>
+            <p class="fs_30 pt-3 fw_700">용인 에버라인</p>
+            <p class="letter48">Yongin Everline</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5">
+    <div class="row mw_1296">
+        <div class="col">
+            <div class="color_point point_ico fs_20 fw_600">
+                <img src="https://youninsubway.s3.amazonaws.com/images/ico/directions_subway.png" class="img-fluid mr-1">
+                역정보
+            </div>
+        </div>
+    </div>
+
+    <div class="row pt_30px mw_1296">
+        <div class="col py_40px bg_f8 text-center">
+            <p class="fs_18 pc_br_none">역을 선택하시면 해당역의<br>역사정보를 안내해 드립니다.</p>
+
+            <div class="pt_30px d-flex fs_18 align-items-center mw_520 justify-content-center m_block">
+                
+                <div class="d-flex align-items-center">
+                    <p class="fw_600 pr-3">역선택</p>
+                    <div class="custom_select custom_select_line w_240">
+                        <div class="selected">
+                            <div class="selected-value">역을 선택하세요</div>
+                            <div class="arrow"></div>
+                        </div>
+                        <ul id="stationList">
+                            <li class="option">역을 선택하세요</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn btn-secondary w_190 fw_600 fs_18 m_mt_30" onclick="station.goSearch()" >검색하기</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-7 pb-7">
+    <div class="row align-items-center mw_1296 text-center station_row m_mx_12">
+
+        <div class="col-3 p-0">
+            <div class="station_left">
+                <div>
+                    <p id="nameLeft" class="fs_24 fw_700"></p>
+                    <p id="nameLeftEng"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col p-0">
+            <div class="station_center">
+                <div>
+                    <p id="name" class="fs_36 fw_700"></p>
+                    <p id="nameEng" class="fs_28 color_6c"></p>
+                </div>
+            </div>
+            <div class="station_line"></div>
+        </div>
+        <div class="col-3 p-0">
+            <div class="station_right">
+                <div>
+                    <p id="nameRight" class="fs_24 fw_700"></p>
+                    <p id="nameRightEng"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container-fluid pb-8">
+    <div class="row mw_1296">
+        <div class="col">
+            <div class="tabs_wrap">
+
+                <ul class="tabs tab_33percent">
+                    <li class="fs_18 fw_600 tab_link active" data-tab="tab_1">역사소개
+                        <div></div>
+                    </li>
+                    <li class="fs_18 fw_600 tab_link" data-tab="tab_2">역이용안내도
+                        <div></div>
+                    </li>
+                    <li class="fs_18 fw_600 tab_link" data-tab="tab_3">역주변안내
+                        <div></div>
+                    </li>
+                </ul>
+
+                <div id="tab_1" class="tab_content active tab_50_c">
+                    <div class="text-center">
+                        <img id="photoImg" src="" class="img-fluid">
+                    </div>
+
+                    <div class="color_point point_ico2 fs_20 fw_600 pt-5_1">
+                        <img src="https://youninsubway.s3.amazonaws.com/images/ico/ico_txt.png" class="img-fluid mr-1">
+                        역사 소개
+                    </div>
+
+
+                    <div class="pt_40px fs_18 ">
+                        <table class="nt vertical">
+                            <tr>
+                                <td class="fw_600">주소</td>
+                                <td id="address" class="text-left"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw_600">특징</td>
+                                <td id="traits" class="text-left"></td>
+                            </tr>
+                            <tr>
+                                <td class="fw_600">환승정보</td>
+                                <td id="trans" class="text-left"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                </div>
+                <div id="tab_2" class="tab_content tab_50_c">
+                    <div class="text-center">
+                        <img id="mapImg" src="" class="img-fluid">
+                    </div>
+                    <div class="color_point point_ico2 fs_20 fw_600 pt-5_1">
+                        <img src="https://youninsubway.s3.amazonaws.com/images/ico/ico_txt.png" class="img-fluid mr-1">
+                        범례 Legend
+                    </div>
+                    <img src="https://youninsubway.s3.amazonaws.com/images/station_info_photo_02.png" class="img-fluid mt-2 pc">
+                    <img src="https://youninsubway.s3.amazonaws.com/images/station_info_photo_02_mobile.png" class="img-fluid mt-2 mobile">
+                </div>
+                <div id="tab_3" class="tab_content tab_50_c mw_1076">
+
+                    <div class="color_point point_ico2 fs_20 fw_600 mb-3">
+                        <img src="https://youninsubway.s3.amazonaws.com/images/ico/ico_txt.png" class="img-fluid mr-1">
+                        역 주변 시설 안내
+                    </div>
+                    <div class="text-center">
+                        <img id="areaImg" src="" class="img-fluid">
+                    </div>
+                    <div id="exits" class="row pt-5">
+                        <div id="exitOrigin" class="col-sm">
+                            <div class="exitName bg_gray py_20px text-center border_r6 fs_20 fw_600"></div>
+                            <div class="fs_18 pt_20px">
+                                <ul class="spots">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://youninsubway.s3.amazonaws.com/stationData.js"></script>
+<script>
+//탭
+$(()=> {
+
+    $('ul.tabs li').click(function () {
+        var tab_id = $(this).attr('data-tab');
+
+        $('ul.tabs li').removeClass('active');
+        $('.tab_content').removeClass('active');
+
+        $(this).addClass('active');
+        $("#" + tab_id).addClass('active');
+    });
+
+    station.init();
+})
+
+var station = {
+    id : 1,
+    current : null,
+    lang : 'ko',
+
+    init : ()=>{  
+        station.drawSelect();
+        if(utils.getParamFromUrl('id') != null){
+            station.id = utils.getParamFromUrl('id');
+        }
+        station.current = stationData.find(e=>e.id==station.id);
+        console.log(station.current);
+        station.drawData();
+    },
+
+    setId : (id)=> {
+        station.id = id;
+        console.log(station.id);
+    },
+
+    goSearch : ()=>{
+        location.href=`/page/?M2_IDX=28955&id=${station.id}`;
+    },
+
+    drawSelect : ()=> {
+        $list = $('#stationList');
+        $.each(stationData, (i, item)=>{
+            let name;
+            if(station.lang=='ko' ){
+                if(item.descriptionKo != ""){
+                    name = item.nameKo+"("+item.descriptionKo+")";
+                }else{
+                    name = item.nameKo;
+                }
+            }else{
+                name = item.nameEn;
+            }
+            let $li = $('<li>').addClass('option').attr('onclick', `station.setId(${item.id})`).val(item.id).html(name);
+            $list.append($li)
+        });
+    },
+
+    drawData : ()=>{
+        let leftStation = stationData.find(e=>e.id == station.current.id-1);
+        let rightStation = stationData.find(e=>e.id == station.current.id+1);
+
+        // if(station.lang == 'ko'){
+            let name;
+            if(station.current.descriptionKo != ""){
+                name = station.current.nameKo+"("+station.current.descriptionKo+")";
+            }else{
+                name = station.current.nameKo;
+            }
+
+            $('#name').html(name);
+            $('#nameEng').html(station.current.nameEn);
+            if(leftStation != null){
+                let name;
+                if(leftStation.descriptionKo != ""){
+                    name = leftStation.nameKo+"("+leftStation.descriptionKo+")";
+                }else{
+                    name = leftStation.nameKo;
+                }
+                $('#nameLeft').html(name);
+                $('#nameLeftEng').html(leftStation.nameEn);
+            }else{
+                $('nameLeft').html('역없음');
+            }
+            if(rightStation != null){
+                let name;
+                if(rightStation.descriptionKo != ""){
+                    name = rightStation.nameKo+"("+rightStation.descriptionKo+")";
+                }else{
+                    name = rightStation.nameKo;
+                }
+                
+                $('#nameRight').html(name);
+                $('#nameRightEng').html(rightStation.nameEn);
+            }else{
+                $('nameRight').html('역없음');
+            }
+
+        // }else{
+        //     $('#name').html(station.current.nameEn);
+        // }
+
+        $('#photoImg').attr('src', `https://youninsubway.s3.amazonaws.com/images/station/photo_${station.current.id}.jpg`);
+        $('#mapImg').attr('src', `https://youninsubway.s3.amazonaws.com/images/station/map_${station.current.id}.jpg`);
+        $('#areaImg').attr('src', `https://youninsubway.s3.amazonaws.com/images/station/area_${station.current.id}.jpg`);
+
+        $('#address').html(station.current.address);
+        let traitStr = utils.replaceBrTag(station.current.trait);
+        let traits = traitStr.split('<br>');
+        for(trait of traits){
+            let $li = $('<li>').html(trait);
+            $('#traits').append($li);
+        }
+        $('#trans').html(station.current.trans);
+        let $origin = $('#exitOrigin');
+        for(exit of station.current.exits){
+            let $exit = $origin.clone();
+            $exit.find(".exitName").html(`출구 ${exit.id}`);
+            let $spots = $exit.find(".spots");
+            for(spot of exit.spots){
+                let $li = $('<li>').html(spot);
+                $spots.append($li);
+            }
+            $('#exits').append($exit);
+        }   
+        $origin.remove();     
+    }
+
+}
+//셀렉트
+const selectBoxElements = document.querySelectorAll(".custom_select");
+
+function toggleSelectBox(selectBox) {
+    selectBox.classList.toggle("active");
+}
+
+function selectOption(optionElement) {
+    const selectBox = optionElement.closest(".custom_select");
+    const selectedElement = selectBox.querySelector(".selected-value");
+    selectedElement.textContent = optionElement.textContent;
+}
+
+selectBoxElements.forEach(selectBoxElement => {
+    selectBoxElement.addEventListener("click", function (e) {
+        const targetElement = e.target;
+        const isOptionElement = targetElement.classList.contains("option");
+
+        if (isOptionElement) {
+            selectOption(targetElement);
+        }
+
+        toggleSelectBox(selectBoxElement);
+    });
+});
+
+document.addEventListener("click", function (e) {
+    const targetElement = e.target;
+    const isSelect = targetElement.classList.contains("select") || targetElement.closest(".custom_select");
+
+    if (isSelect) {
+        return;
+    }
+
+    const allSelectBoxElements = document.querySelectorAll(".custom_select");
+
+    allSelectBoxElements.forEach(boxElement => {
+        boxElement.classList.remove("active");
+    });
+
+});
+</script>

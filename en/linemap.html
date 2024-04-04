@@ -1,0 +1,463 @@
+<link rel="stylesheet" href="https://youninsubway.s3.amazonaws.com/en/css/sub.css">
+
+<link rel="stylesheet" href="https://youninsubway.s3.amazonaws.com/en/css/subway3en.css">
+
+
+<div class="container-fluid sub_top_01_01 top_height">
+    <div class="row align-items-center mw_1296">
+        <div class="col color_fff text-center">
+            <p class="fs_20"> <span class="fw_600">Conveniently life, </span>Beautiful the environment</p>
+            <p class="fs_30 pt-3 fw_700">Yongin EverLine</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5">
+    <div class="row mw_1296">
+        <div class="col">
+            <div class="color_point point_ico fs_20 fw_600">
+                <img src="https://youninsubway.s3.amazonaws.com/images/ico/directions_subway.png"
+                    class="img-fluid mr-1">
+                    Line Map
+            </div>
+        </div>
+    </div>
+
+    <div class="row pt_30px mw_1296">
+        <div class="col py_40px bg_f8 text-center">
+            <p class="fs_18 pc_br_none">
+                Please select <span class="fw_600">Departure station</span> and <span class="fw_600">Arrival Station</span> for line and fare information.
+            </p>
+
+            <div class="pt_30px d-flex fs_18 align-items-center mw_1015 justify-content-center m_block">
+                <div class="d-flex align-items-center">
+                    <p class="fw_600 pr-3 m_w110">Departure station</p>
+                    <div class="custom_select custom_select_line w_240">
+                        <div class="selected">
+                            <div id="startText" class="selected-value">Departure station</div>
+                            <div class="arrow"></div>
+                        </div>
+                        <ul id="stationListStart">
+                            <li class="option">Departure station</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <img src="https://youninsubway.s3.amazonaws.com/images/ico/line_end_arrow_notch.png"
+                    class="img-fluid mw_24 ml-4 mr-4 m_display_none">
+
+                <div class="d-flex align-items-center m_mt_10">
+                    <p class="fw_600 pr-3 m_w110">Arrival Station</p>
+                    <div class="custom_select custom_select_line w_240">
+                        <div class="selected">
+                            <div id="endText" class="selected-value">Arrival Station</div>
+                            <div class="arrow"></div>
+                        </div>
+                        <ul id="stationListEnd">
+                            <li class="option">Arrival Station</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary w_190 fw_600 fs_18 m_mt_30" onclick="line.goSearch()">Search</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt_40px pb-6">
+    <div class="row align-items-center mw_1296 grid_gray fs_18 m_mx_12">
+        <div class="col py-3 bg_f8 text-center fw_600">
+            Time
+        </div>
+        <div class="col pl-4">
+            <span id="time">2</span> minutes
+        </div>
+        <div class="col-sm-2 py-3 bg_f8 text-center fw_600 m_mt_10">
+            Price information
+        </div>
+        <div class="col-sm-3 pl-4 m_mt_10">
+            Card: &#8361;<span id="payCard">1,600</span>/ Single Ticket: &#8361;<span id="payOnce">1,700</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container-fluid pt_40px pb-6">
+    <div class="row mw_1296">
+        <div class="col">
+            <div class="tab_content p-0  active">
+                <div class="route_map_wrap">
+                    <ul class="route_map">
+                        <li id="station1">
+                            <i class="t">아이콘</i>
+                            <div class="text fr">
+                                <h5 class="fw_600">GIHEUNG-<br>
+                                    NJP-ART CENTER</h5>
+                            </div>
+                            <div class="line on lg1">라인</div>
+                        </li>
+                        <li id="station2">
+                            <i>아이콘</i>
+                            <div class="text top ">
+                                <h5 class="fw_600">KANGNAM UNIV.</h5>
+                            </div>
+                            <div class="line on lg2">라인</div>
+                        </li>
+                        <li id="station3">
+                            <i>아이콘</i>
+                            <div class="text">
+                                <h5 class="fw_600">JISEOK</h5>
+                            </div>
+                            <div class="line on lg3">라인</div>
+                        </li>
+                        <li id="station4">
+                            <i>아이콘</i>
+                            <div class="text top">
+                                <h5 class="fw_600">EOJEONG</h5>
+                                
+                            </div>
+                            <div class="line on lg4">라인</div>
+                        </li>
+                        <li id="station5">
+                            <i>아이콘</i>
+                            <div class="text">
+                                <h5 class="fw_600">DONGBAEK</h5>
+                                
+                            </div>
+                            <div class="line on lg5">라인</div>
+                        </li>
+                        <li id="station6">
+                            <i>아이콘</i>
+                            <div class="text top">
+                                <h5 class="fw_600">CHODANG</h5>
+                                
+                            </div>
+                            <div class="line on lg6">라인</div>
+                        </li>
+                        <li id="station7" class="end">
+                            <i>아이콘</i>
+                            <div class="text top">
+                                <h5 class="fw_600">SAMGA</h5>
+                                
+                            </div>
+                            <div class="line on se lg7">라인</div>
+                            <div class="round on lg7">라운드</div>
+                            <div class="line on verti2 lg7">라인</div>
+                        </li>
+                        <br>
+                        <li id="station8" class="right">
+                            <div class="box">
+                                <i class="rotate">아이콘</i>
+                                <div class="text">
+                                    <h5 class="fw_600">CITYHALL.<br>YONGIN UNIV</h5>
+                                    
+                                </div>
+                            </div>
+                            <div class="line on verti1 se se02 lg8">라인</div>
+                            <div class="round on bot lg8">라운드</div>
+                        </li>
+                        <br>
+                        <li id="station9" class="se r">
+                            <i>아이콘</i>
+                            <div class="text myong">
+                                <h5 class="fw_600">MYONGJI UNIV.</h5>
+                                
+                            </div>
+                            <div class="line on se se03 lg8">라인</div>
+                        </li>
+                        <li id="station10" class="se">
+                            <i>아이콘</i>
+                            <div class="text top">
+                                <h5 class="fw_600">GIMNYANG JANG</h5>
+                                
+                            </div>
+                            <div class="line on lg9">라인</div>
+                        </li>
+                        <li id="station11" class="se">
+                            <i>아이콘</i>
+                            <div class="text song">
+                                <h5 class="fw_600">YONGIN JUNGANG MARKET<br>-YONGIN ARTS&SCIENCE UNIV.</h5>
+                                
+                            </div>
+                            <div class="line on lg10">라인</div>
+                        </li>
+                        <li id="station12" class="se">
+                            <i>아이콘</i>
+                            <div class="text top">
+                                <h5 class="fw_600">GOJIN</h5>
+                                
+                            </div>
+                            <div class="line on lg11">라인</div>
+                        </li>
+                        <li id="station13" class="se">
+                            <i>아이콘</i>
+                            <div class="text">
+                                <h5 class="fw_600">BOPYEONG</h5>
+                                
+                            </div>
+                            <div class="line on lg12">라인</div>
+                        </li>
+                        <li id="station14" class="se">
+                            <i>아이콘</i>
+                            <div class="text top">
+                                <h5 class="fw_600">DUNJEON</h5>
+                                
+                            </div>
+                            <div class="line on lg13">라인</div>
+                        </li>
+                        <li id="station15" class="end se">
+                            <i class="t">아이콘</i>
+                            <div class="text fr jeondae">
+                                <h5 class="fw_600">JEONDAE·<br>EVERLAND</h5>
+                                
+                            </div>
+                            <div class="line on lg14">라인</div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="originBox" class="markerBox d-none">
+                    <div class="markerTitle"></div>
+                    <div class="markerName"></div>
+                    <div class="guide"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://youninsubway.s3.amazonaws.com/stationData.js"></script>
+<script>
+    $(() => {
+        line.init();
+        //역선택 창이 푸터에 파뭍히는 이슈
+        $('.nx-col>div').append($('footer'));
+    });
+
+    //셀렉트
+    const selectBoxElements = document.querySelectorAll(".custom_select");
+
+    function toggleSelectBox(selectBox) {
+        selectBox.classList.toggle("active");
+    }
+
+    function selectOption(optionElement) {
+        const selectBox = optionElement.closest(".custom_select");
+        const selectedElement = selectBox.querySelector(".selected-value");
+        selectedElement.textContent = optionElement.textContent;
+    }
+
+    selectBoxElements.forEach(selectBoxElement => {
+        selectBoxElement.addEventListener("click", function (e) {
+            const targetElement = e.target;
+            const isOptionElement = targetElement.classList.contains("option");
+
+            if (isOptionElement) {
+                selectOption(targetElement);
+            }
+
+            toggleSelectBox(selectBoxElement);
+        });
+    });
+
+    document.addEventListener("click", function (e) {
+        const targetElement = e.target;
+        const isSelect = targetElement.classList.contains("select") || targetElement.closest(".custom_select");
+        if (isSelect) {
+            return;
+        }
+        const allSelectBoxElements = document.querySelectorAll(".custom_select");
+        allSelectBoxElements.forEach(boxElement => {
+            boxElement.classList.remove("active");
+        });
+    });
+
+    var line = {
+        count: 0,
+        idStart: null,
+        idEnd: null,
+        lang: 'en',
+
+        init: () => {
+            line.drawSelect();
+            $originBox = $('#originBox');
+            $('.route_map i').each((index, item) => {
+                let $box = $originBox.clone().attr('id', `markerBox_${index + 1}`);
+                $(item).after($box);
+            });
+            $('#originBox').remove();
+            //시작할 때 값이 있을 경우
+            if (utils.getParamFromUrl('start') != null && utils.getParamFromUrl('end') != null) {
+                line.idStart = utils.getParamFromUrl('start');
+                line.idEnd = utils.getParamFromUrl('end');
+                let startText = $(`#start${line.idStart}`).html();
+                $('#startText').html(startText);
+                let endText = $(`#end${line.idEnd}`).html();
+                $('#endText').html(endText);
+                line.goSearch();
+            }
+
+        },
+
+        drawSelect: () => {
+            $listStart = $('#stationListStart');
+            $.each(stationData, (i, item) => {
+                let name;
+                if (line.lang == 'ko') {
+                    if (item.descriptionKo != "") {
+                        name = item.nameEn + "·" + item.descriptionKo;
+                    } else {
+                        name = item.nameEn;
+                    }
+                } else {
+                    name = item.nameEn;
+                }
+                let $li = $('<li>').attr('id', `start${item.id}`).addClass('option').attr('onclick', `line.setIdFromList(${item.id}, true)`).val(item.id).html(name);
+                $listStart.append($li)
+            });
+            $listEnd = $('#stationListEnd');
+            $.each(stationData, (i, item) => {
+                let name;
+                if (line.lang == 'ko') {
+                    if (item.descriptionKo != "") {
+                        name = item.nameKo + "·" + item.descriptionKo;
+                    } else {
+                        name = item.nameKo;
+                    }
+                } else {
+                    name = item.nameEn;
+                }
+                let $li = $('<li>').attr('id', `end${item.id}`).addClass('option').attr('onclick', `line.setIdFromList(${item.id}, false)`).val(item.id).html(name);
+                $listEnd.append($li);
+            });
+
+        },
+
+        goSearch: () => {
+            if (line.idStart == null || line.idEnd == null) {
+                alert('Please Select Stations.');
+                return false;
+            }
+            if (line.idStart == line.idEnd) {
+                alert('Departure and Arrival Station can not same.');
+                return false;
+            }
+            line.resetDraw();
+            line.drawStart();
+            line.drawEnd();
+            line.drawLine();
+        },
+
+        setIdFromList: (id, pos) => {
+            if (pos) {
+                line.idStart = id;
+            } else {
+                line.idEnd = id;
+            }
+            console.log(line.idStart, line.idEnd);
+        },
+
+        clickFromMap: (id, pos) => {
+            line.count++;
+            if (line.count == 3) {
+                line.count = 0;
+                console.log('reset count');
+                return false;
+            } else if (line.count == 1) {
+                line.idStart = id;
+                line.drawStart();
+            } else if (line.count == 2) {
+                line.idEnd = id,
+                    line.drawEnd();
+            }
+            line.drawLine();
+
+        },
+
+        drawStart: () => {
+            let startStation = stationData.find(e => e.id == line.idStart);
+            let $marker = $(`#markerBox_${line.idStart}`);
+            $marker.find('.markerTitle').html('Depar.');
+            $marker.find('.markerName').html(startStation.nameEn);
+            $marker.removeClass('d-none');
+        },
+
+        drawEnd: () => {
+            let endStation = stationData.find(e => e.id == line.idEnd);
+            let $marker = $(`#markerBox_${line.idEnd}`);
+            $marker.find('.markerTitle').empty().html('Arrival');
+            $marker.find('.markerName').empty().html(endStation.nameEn);
+            $marker.removeClass('d-none');
+        },
+
+        drawLine: () => {
+            $(`.route_map li .line, .round`).removeClass('active').addClass('on');
+
+            $(`.route_map li i`).each((i, item) => {
+                console.log(i);
+                if (i != 1 - 1 && i != 15 - 1) {
+                    $(item).removeClass('active');
+                }
+            });
+
+            let idMin = Math.min(line.idStart, line.idEnd);
+            let idMax = Math.max(line.idStart, line.idEnd);
+            let focusIds = [];
+            //칠해야 하는 역 추출
+            for (i = 0; i < 16; i++) {
+                if (idMin <= i && i <= idMax) {
+                    focusIds.push(i);
+                }
+            }
+            console.log(focusIds);
+            //역 칠하기
+            for (id of focusIds) {
+                if (id != 1 && id != 15) {
+                    $(`#station${id} i`).addClass('active');
+                }
+            }
+            //선 칠하기
+            let brushIteration = idMax - idMin;
+            for (i = 0; i < brushIteration; i++) {
+                $(`.lg${idMin + i}`).addClass('active');
+            }
+
+            //소요시간 등
+            $('#time').html(brushIteration * 2);
+
+            // let pay = 1450; 23.10.07요금인상
+            let pay = 1600;
+
+            if (brushIteration > 8) pay += 100;
+            if (brushIteration > 12) pay += 100
+            
+            //일부 역 보정. 보평-동백, 삼가-전대, 기흥-보평, 지석-운동장, 기흥-명지대
+            if(
+                idMin == 5 && idMax == 13 ||
+                idMin == 7 && idMax == 15 ||
+                idMin == 1 && idMax == 13 ||
+                idMin == 3 && idMax == 11 ||
+                idMin == 1 && idMax == 9
+            ){
+                pay +=100;
+            }
+            
+            $('#payCard').html(utils.won3Comma(pay));
+            $('#payOnce').html(utils.won3Comma(pay + 100));
+
+        },
+
+        resetDraw: () => {
+            $('.markerBox').addClass('d-none');
+            $('.markerBox').find('.markerTitle').empty();
+            $('.markerBox').find('.markerName').empty();
+        }
+
+    }
+</script>

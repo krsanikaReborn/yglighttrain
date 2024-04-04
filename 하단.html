@@ -1,0 +1,139 @@
+<style>
+    #secondLogoArea{
+        text-align: left;
+        padding-left : 0px;
+    }
+
+    @media screen and (max-width:586px) {
+        #secondLogoArea{
+            text-align: center;
+            padding-left : 0;
+            padding-top: 12px !important;
+        }
+        #m_dawonFooterBox{
+            width: 168px;
+            height: 39px;
+        }
+    }
+
+</style>
+
+<footer class="py-5">
+    <div class="container-fluid ">
+        <div class="row align-items-center mw_1296">
+            <div class="col-sm-2 text-center mr-auto">
+                <img src="https://youninsubway.s3.amazonaws.com/images/logo.png" class="img-fluid logo_footer">
+            </div>
+            <div class="col-sm text-center m_flex_auto">
+                <div class="row justify-content-center">
+                    <div class="footer_box ">
+                        <a class="color_5F5F5F fs_14" href="/page/?M2_IDX=28979">오시는 길</a>
+                    </div>
+
+                    <div class="footer_box">
+                        <a class="color_5F5F5F fs_14" href="/page/?M2_IDX=28980">개인정보처리방침</a>
+                    </div>
+
+                    <div class="footer_box">
+                        <a class="color_5F5F5F fs_14" href="/page/?M2_IDX=28981">여객운송약관</a>
+                    </div>
+
+                    <div class="footer_box">
+                        <a class="color_5F5F5F fs_14" href="/page/?M2_IDX=28990">영상정보기기운영관리방침</a>
+                    </div>
+
+                    <!-- 
+                    <div class="footer_box">
+                        <a class="color_5F5F5F fs_14" href="/board/list.php?M2_IDX=28960">채용공고</a>
+                    </div> 
+                    -->
+
+                    <div class="footer_box">
+                        <a class="color_5F5F5F fs_14" href="https://office.hiworks.com/yilrt.co.kr" target="_blank">인트라넷</a>
+                    </div>
+
+                    <div class="footer_box">
+                        <a class="color_5F5F5F fs_14" href="/page/?M2_IDX=28991">이메일무단수집거부</a>
+                    </div>                    
+                    <div class="footer_box">
+                        <a class="color_5F5F5F fs_14" href="/page/?M2_IDX=29003">사이트맵</a>
+                    </div>
+                    <!-- <div id="m_dawonFooterBox" class="footer_box">
+                    </div> -->
+                </div>
+            </div>
+            <div id="secondLogoArea" class="col-sm-1 mr-auto pt-2">
+                <!-- <a href="/page/?M2_ID=28978"> -->
+                    <img src="https://youninsubway.s3.amazonaws.com/images/un_logo.png" class="img-fluid logo_footer un_logo">
+                <!-- </a> -->
+            </div>
+        </div>
+
+
+        <div class="row align-items-center mw_1296">
+            <div class="f_line"></div>
+        </div>
+        <div class="row align-items-center mw_1296 m_text_center">
+            <div id="footerTextPc" class="col-sm-12 d-flex m_block">
+                <div class="fw_600 pr-3">주소</div>
+                <div class="pr-5">경기도 용인시 처인구 중부대로 1074 (삼가동)</div>
+                <div class="fw_600 pr-3 m_mt_10">대표전화</div>
+                <div class="">031-329-3500</div>
+            </div>
+            <div id="footerTextMobile" class="col-sm-12 d-flex m_block justify-content-center">
+                <div class="fw_600">주소</div>
+                <div class="">경기도 용인시 처인구 중부대로 1074 (삼가동)</div>
+                <div class="m_mt_10 fw_600">대표전화</div>
+                <div class="">031-329-3500</div>
+            </div>
+            <div class="col-sm color_B3B3B3 pt-1 m_mt_10 pc_br_none">Copyright ⓒ2023 YONGIN EVERLINE. <br>ALL
+                RIGHTS RESERVED.</div>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+$(()=>{
+//     if($('body').width() < 580){
+//         $('body').height($('.bg_img').height());
+//         //스케일 계산
+//         let scale= screen.width / 360;
+//         console.log(scale);
+
+//         $('body').css({maxWidth : 360, transform : 'scale('+scale+')', transformOrigin : '0% 0%'});
+//     }
+    $(window).resize(resizeFooter);
+    resizeFooter();
+
+});
+
+var resizeFooter = () => {
+        if($(window).width() < 1367){
+            console.log('mobile!');
+            // $('#m_dawonFooterBox').append($('#secondLogoArea').removeClass('col-sm-1 mr-auto pt-2'));
+            $('#submenu').hide();
+        }else{
+            console.log('pc!')
+            // $('.col-sm.text-center.m_flex_auto').after($('#secondLogoArea').addClass('col-sm-1 mr-auto pt-2'));
+            // let firstMenuLeft = $('.nav-item').first().offset().left;            
+            // let secondMenu = $('sub_menu_c');
+
+            // console.log(firstMenuLeft - secondMenuLeft);
+            // $('sub_menu_c').css({left : firstMenuLeft - SecondMenuLeft});
+        }
+
+        if($(window).width() < 584){
+            $('#footerTextMobile').css({height : 'auto', overflow:'auto'});
+            $('#footerTextPc').css({height : 0, overflow:'hidden'});
+
+        }else{
+            $('#footerTextMobile').css({height : 0, overflow:'hidden'});
+            $('#footerTextPc').css({height : 'auto', overflow:'auto'});
+
+        }
+
+    }
+
+
+</script>

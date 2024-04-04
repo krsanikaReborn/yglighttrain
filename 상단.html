@@ -1,0 +1,313 @@
+<meta charset="utf-8">
+    <title>Main</title>
+
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://youninsubway.s3.amazonaws.com/css/common.css">
+
+    <link rel="stylesheet" href="https://youninsubway.s3.amazonaws.com/css/sub.css">
+    <link rel="stylesheet" href="https://youninsubway.s3.amazonaws.com/css/newtable.css">
+
+    <div id="navs">
+        <div class="nav_c roll">
+            <nav id="topmenu" class="navbar navbar-expand-md navbar-dark fixed_top">
+                <a class="nav-link brand" href="/"><img src="https://youninsubway.s3.amazonaws.com/images/logo.png"
+                        alt="Logo" class="logo "></a>
+                <div class="collapse navbar-collapse mx-auto" id="collapsibleNavbar">
+                    <ul class="navbar-nav justify-content-center w-100 nav_center">
+                        <li class="nav-item bd_leftSmall">
+                            <a class="nav-link " href="/page/?M2_IDX=28907">이용안내</a>
+                        </li>
+                        <li class="nav-item bd_leftSmall">
+                            <a class="nav-link " href="/board/list.php?M2_IDX=28958">알림마당</a>
+                        </li>
+                        <li class="nav-item bd_leftSmall">
+                            <a class="nav-link " href="/page/?M2_IDX=28963">고객마당</a>
+                        </li>
+                        <li class="nav-item bd_leftSmall">
+                            <a class="nav-link " href="/page/?M2_IDX=28969">안전환경</a>
+                        </li>
+                        <li class="nav-item bd_leftSmall">
+                            <a class="nav-link " href="/page/?M2_IDX=28973">회사소개</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mr-auto nav_right">
+                        <li class="color_secondary logOff"><a href="/log/log.php">로그인</a></li>
+                        <li class="color_secondary logOn d-none"><a href="/lib/logoutProc.php">로그아웃</a></li>
+                        <li><a href="/memb/memb.add.php?b_idx=">회원가입</a></li>
+                        <li class="d-flex lang">
+                            <a href="https://en.ever-line.co.kr/"><img src="https://youninsubway.s3.amazonaws.com/images/flag/US.png" class="img-fluid">
+                                English</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div id="submenu" class="container-fluid sub_menu fixed_top02  text-center" style="display: none;">
+            <!-- <div class="mw_1296 ab">
+                <div class="bg_gray border_r6 sub_menu_ab text-left mt_30px">
+                    <p class="color_point fw_600 fs_18">문화행사</p>
+                    <p class="color_5B5B5B">용인문화재단, 에버라인과 함께하는
+                        ‘YOUNG! 아트로드’ 성료</p>
+                    <p class="color_989898">2019.11.08</p>
+                </div>
+                <div class="bg_gray border_r6 sub_menu_ab text-left mt_20px">
+                    <p class="color_point fw_600 fs_18">공지사항</p>
+                    <p class="color_5B5B5B">개인정보처리방칭 개정(안) 공고문</p>
+                    <p class="color_989898">2019.11.08</p>
+                </div>
+            </div> -->
+            <div class="container  sub_menu_c mw_600 ">
+                <div class="row">
+                    <div class="col pd_42 addBC">
+                        <div class=""><a href="/page/?M2_IDX=28907">에버라인 이용정보</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28908">노선안내</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28909">운행시간</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28955">역정보</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28956">편의시설정보</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28957">에버라인소개</a></div>
+                    </div>
+                    <div class="col pd_42 addBC">
+                        <div class=""><a href="/board/list.php?M2_IDX=28958">공지사항</a></div>
+                        <!-- <div class=""><a href="/board/list.php?M2_IDX=28959">입찰정보</a></div>
+                        <div class=""><a href="/board/list.php?M2_IDX=28960">채용정보</a></div> -->
+                        <div class=""><a href="/board/list.php?M2_IDX=28961">경전철소식</a></div>
+                        <!-- <div class=""><a href="/board/list.php?M2_IDX=28962">추천맛집</a></div> -->
+                    </div>
+                    <div class="col pd_42 addBC">
+                        <div class=""><a href="/coun/?M2_IDX=29181">고객의 소리</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28964">유실물 센터</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28965">지연증명서 발급</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28966">고객 서비스 헌장</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28967">광고문의</a></div>
+                    </div>
+                    <div class="col pd_42 addBC">
+                        <div class=""><a href="/page/?M2_IDX=28969">안전경영</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28970">안전가이드</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28971">안전시설</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28972">안전시스템 소개</a></div>
+                    </div>
+                    <div class="col pd_42 addBC">
+                        <div class=""><a href="/page/?M2_IDX=28973">CEO 인사말</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28974">ESG경영 소개</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28975">조직도</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28976">CI/BI소개</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28977">주요 연혁</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28978">운영사 소개</a></div>
+                        <div class=""><a href="/page/?M2_IDX=29119">운영사 CEO 인사말</a></div>
+                        <div class=""><a href="/page/?M2_IDX=28979">찾아오시는길</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="hamburger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    
+    </div>
+
+    <!--------------------------햄붜거------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+    <div class="overlay">
+        <nav class="hamburger_menu">
+            <dl>
+                <dt>
+                    <span>이용안내</span>
+                </dt>
+                <dd>
+                    <a href="/page/?M2_IDX=28907">에버라인 이용정보</a><br>
+                    <a href="/page/?M2_IDX=28908">노선안내</a><br>
+                    <a href="/page/?M2_IDX=28909">운행시간</a><br>
+                    <a href="/page/?M2_IDX=28955">역정보</a><br>
+                    <a href="/page/?M2_IDX=28956">편의시설정보</a><br>
+                    <a href="/page/?M2_IDX=28957">에버라인소개</a><br>
+                </dd>
+                <dt><span>알림마당</span></dt>
+                <dd>
+                    <a href="/board/list.php?M2_IDX=28958">공지사항</a><br>
+                    <!-- <a href="/board/list.php?M2_IDX=28959">입찰정보</a><br>
+                    <a href="/board/list.php?M2_IDX=28960">채용정보</a><br> -->
+                    <a href="/board/list.php?M2_IDX=28961">경전철소식</a><br>
+                    <!-- <a href="/board/list.php?M2_IDX=28962">추천맛집</a><br> -->
+                </dd>
+                <dt><span>고객마당</span></dt>
+                <dd>
+                    <a href="/coun/?M2_IDX=29181">고객의 소리</a><br>
+                    <a href="/page/?M2_IDX=28964">유실물 센터</a><br>
+                    <a href="/page/?M2_IDX=28965">지연증명서 발급</a><br>
+                    <a href="/page/?M2_IDX=28966">고객 서비스 헌장</a><br>
+                    <a href="/page/?M2_IDX=28967">광고문의</a><br>
+                    <a href="/coun/?M2_IDX=28968">안전신문고</a><br>
+                </dd>
+                <dt><span>안전환경</span></dt>
+                <dd>
+                    <a href="/page/?M2_IDX=28969">안전경영</a><br>
+                    <a href="/page/?M2_IDX=28970">안전가이드</a><br>
+                    <a href="/page/?M2_IDX=28971">안전시설</a><br>
+                    <a href="/page/?M2_IDX=28972">안전시스템 소개</a><br>
+                </dd>
+                <dt><span>회사소개</span></dt>
+                <dd>
+                    <a href="/page/?M2_IDX=28973">CEO 인사말</a><br>
+                    <a href="/page/?M2_IDX=28974">ESG경영 소개</a><br>
+                    <a href="/page/?M2_IDX=28975">조직도</a><br>
+                    <a href="/page/?M2_IDX=28976">CI/BI소개</a><br>
+                    <a href="/page/?M2_IDX=28977">주요 연혁</a><br>
+                    <a href="/page/?M2_IDX=28978">운영사 소개</a><br>
+                    <a href="/page/?M2_IDX=29119">운영사 CEO 인사말</a><br>
+                    <a href="/page/?M2_IDX=28979">찾아오시는길</a><br>
+                </dd>
+                <dt><span>로그인/회원가입</span></dt>
+                <dd>
+                    <a href="/log/log.php?url=%2Fpage%2F%3FM2_IDX%3D28973">로그인</a><br>
+                    <a href="/memb/memb.add.php?b_idx=">회원가입</a><br>
+                </dd>
+                <dt>
+                    <span>
+                        <a href="https://en.ever-line.co.kr/"><img src="https://youninsubway.s3.amazonaws.com/images/flag/US.png" class="img-fluid">
+                            English</a><br>    
+                    </span>                                        
+                </dt>
+            </dl>
+        </nav>
+    </div>
+<div class="m_mt_80"></div>
+
+<script>
+let subMenu = document.getElementById("submenu");
+let apikey = 'gezk9simbs47jw27x2gtc0ae5roftgv0';
+
+
+$(()=> {
+    //로그인처리
+    user.info();
+
+    //메뉴 스크립트
+    $('.addBC').hover(function () {
+        let children = $(this).children().children();
+    }, function () {
+        let children = $(this).children().children();
+    });
+
+    $('.hamburger-button').on('click', function (event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $('.overlay').toggleClass('visible');
+    });
+
+
+    if ($(window).width() > 1000) {
+        $('.nav_center li').hover(function () {
+            subMenu.style.display = "block";
+            window.event.pageY
+        });
+        window.addEventListener('mousemove', function (event) {
+            if (subMenu.style.display == 'block' && event.pageY > 460) {
+                submenu.style.display = 'none';
+            }
+        });
+
+    }
+
+
+});
+//ready End
+
+var acodian = {
+    click: function (target) {
+        var _self = this,
+            $target = $(target);
+        $target.on('click', function () {
+            var $this = $(this);
+            if ($this.next('dd').css('display') == 'none') {
+                $('dd').slideUp();
+                _self.onremove($target);
+
+                $this.addClass('on');
+                $this.next().slideDown();
+            } else {
+                $('dd').slideUp();
+                _self.onremove($target);
+
+            }
+        });
+    },
+    onremove: function ($target) {
+        $target.removeClass('on');
+    }
+
+};
+acodian.click('dt');
+
+var user = {
+    info : ()=>{
+        let pr = $.ajax({
+            url: '/api/info.nx',
+            data: { "KEY": apikey, "SESS_ID": utils.getSessionId(), "param": "id,name,level" },
+            type: "POST",
+            async: false,
+        }).done(function (data) {
+            if (data.success === true) {
+                console.log(data);
+                $('.logOff').addClass('d-none');
+                $('.logOn').removeClass('d-none');
+            } else {
+                console.log('login Nothing!');
+                $('.logOff').removeClass('d-none');
+                $('.logOn').addClass('d-none');
+            }
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            console.log('login Error!' + textStatus + " : " + errorThrown);
+        });
+        return pr;
+
+    }
+}
+var utils = {
+    getParamFromUrl : (key) => {
+        let search = location.search.substring(1);
+        let object = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
+        let param = object[key];
+        return param;
+    },
+
+    isNull : (obj) =>{
+        return (typeof obj != "undefined" && obj != null && obj != "") ? false : true;
+    },
+
+    getSessionId : () => {
+        return document.cookie.match('nx_session=([^;]*)')[1];
+    },
+    
+    replaceBrTag : (str) =>{
+        if (str == undefined || str == null)
+        {
+            return "";
+        }
+        str = str.replace(/\r\n/ig, '<br>');
+        str = str.replace(/\\n/ig, '<br>');
+        str = str.replace(/\n/ig, '<br>');
+        return str;
+    },
+    won3Comma : (str) => {
+        if(Number.isInteger(str)){
+            str = str.toString();
+        }
+        return (str.replace(/\B(?=(\d{3})+(?!\d))/g, ','));        
+    },    
+}
+</script>

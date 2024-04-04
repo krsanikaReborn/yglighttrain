@@ -1,0 +1,62 @@
+.sub_top_sitemap {
+    background: url(../images/sub_visual_06_01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 265px;
+}
+.sub_top_sitemap .row {
+    height: 265px;
+}
+
+
+#sitemap .color_989898{
+    line-height: 32px;
+}
+
+#sitemap {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+#sitemap table {
+    width: 100%;
+}
+
+#sitemap table td {
+    vertical-align: top;
+}
+#sitemap table td:nth-child(1){
+    width: 15%;
+}
+#sitemap table td:nth-child(n+2){
+    width: 28.333%;
+}
+
+.tr_top40 td {
+    padding-top: 38px;
+}
+.table_line td {
+    padding-top: 58px;
+    border-bottom: 1px solid #EEEEEE;
+}
+@media screen and (max-width:576px) {
+    #sitemap table td {
+        display: block;
+        line-height: 40px;
+        width: 100%!important;
+    }
+    #sitemap .color_989898{
+        line-height: 26px;
+    }
+    #sitemap .pt-3 {
+        padding-top: 0!important;
+    }
+    .tr_top40 td, .table_line td  {
+        padding-top: 0;
+    }
+
+    .table_line {
+        padding: 20px 0;
+        display: block;
+    }
+}

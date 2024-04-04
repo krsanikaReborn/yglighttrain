@@ -1,0 +1,48 @@
+<footer id="footer" class="py-5">
+    <div class="container-fluid ">
+        <div class="row align-items-center mw_1296">
+            <div class="col-6 text-left pl-20">
+                <img src="https://youninsubway.s3.amazonaws.com/en/images/eng_logo.png" class="img-fluid logo_footer">
+            </div>
+            <div class="col-6 text-right mr-auto pt-2 pr-0 m_text_center">
+                <!-- <a href="/page/?M2_ID=28978"> -->
+                <img src="https://youninsubway.s3.amazonaws.com/en/images/un_logo.png" class="img-fluid ">
+                <!-- </a> -->
+            </div>
+        </div>
+
+
+        <div class="row align-items-center mw_1296">
+            <div class="f_line"></div>
+        </div>
+        <div class="row align-items-center mw_1296 m_text_center">
+            <div class="col-sm-12 d-flex m_block">
+                <div class="fw_600 pr-3">Address</div>
+                <div class="pr-5">1074 Joongbudae-ro Cheoin-gu Yongin City Kyongkido</div>
+                <div class="fw_600 pr-3 m_mt_10">Customer Service</div>
+                <div class="">031-329-3500</div>
+            </div>
+            <div class="col-sm color_B3B3B3 pt-1 m_mt_10 pc_br_none">Copyright ⓒ2023 YONGIN EVERLINE. <br>ALL
+                RIGHTS RESERVED.</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+$(()=>{
+    $('div[data-id=tab_outer]').remove();    
+    $(window).resize(resizeFooter);
+    resizeFooter();    
+})
+
+
+var resizeFooter = () => {
+        if($(window).width() < 1367){
+            console.log('mobile!');
+            $('#submenu').hide();
+        }else{
+            console.log('pc!')
+            $('.col-sm.text-center.m_flex_auto').after($('#secondLogoArea').addClass('col-sm-1 mr-auto pt-2'));
+        }
+}
+</script>

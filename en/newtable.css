@@ -1,0 +1,76 @@
+table.nt {
+    table-layout: fixed;
+    font-size : 1rem;
+    min-width: 1076px;
+    margin : 0 auto;
+    border-spacing: 6px;
+    border-collapse: separate;
+}
+
+.nt tr{
+    height : 40px;
+}
+
+.nt th {
+    background-color: #00ACC7;
+    color : white;
+    border-radius: 6px;
+    font-weight : 700;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding : 10px;
+    word-break: break-all;
+}
+
+.nt.vertical td:nth-child(1){
+    background-color: #00ACC7;
+    color : white;    
+}
+
+.nt td {
+    background-color: #f5f5f5;
+    color : #1d1d1d;
+    border-radius: 6px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding : 10px;
+    word-break: break-all;
+}
+
+.nt .whitecell{
+    background-color: white !important;
+    border : 1px solid;       
+}
+.nt .greycell{
+    background-color: #f5f5f5 !important;        
+}
+
+@media screen and (max-width:1076px){
+    table.nt {
+        min-width: 100%;
+        border-spacing: 4px;
+        font-size:.8rem;
+    }
+    .nt td{
+        height : 50px;
+    }
+    .nt th {
+        padding : 4px;
+    }
+    .nt td {
+        padding : 4px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    table.nt {
+    }
+    .nt tr {   
+    }
+    .nt th {
+    }
+    .nt td {
+    }
+}   
